@@ -1,0 +1,489 @@
+"use client"
+
+import { useState } from "react"
+import Link from "next/link"
+import { Phone, Mail, MapPin, MessageCircle, ChevronDown, CheckCircle, ArrowRight, Clock, FileText, Users } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { cn } from "@/lib/utils"
+
+const courses = [
+  { value: "aviation", label: "Aviation" },
+  { value: "hotel", label: "Hotel Management" },
+  { value: "cruise", label: "Cruise Management" },
+]
+
+const batches = [
+  { value: "july-2024", label: "July 2024" },
+  { value: "october-2024", label: "October 2024" },
+  { value: "january-2025", label: "January 2025" },
+]
+
+const faqs = [
+  {
+    question: "What are the eligibility criteria for admission?",
+    answer: "For most programs, you need to have completed 10+2 from any stream. Age should be between 18-28 years. For cruise programs, basic swimming proficiency is required. Specific requirements may vary by program.",
+  },
+  {
+    question: "What is the fee structure and are there payment plans?",
+    answer: "Our program fees range from ₹1.5L to ₹3.5L depending on the course. We offer flexible payment plans including EMI options, early bird discounts, and scholarship programs for deserving students.",
+  },
+  {
+    question: "Is placement really guaranteed?",
+    answer: "Yes! We have a 100% placement track record. Our MOU partnerships with 50+ companies ensure every graduate receives placement assistance until they are hired. Our dedicated placement cell works with students throughout the program.",
+  },
+  {
+    question: "How long are the programs?",
+    answer: "Aviation and Cruise programs are 12 months each. Hotel Management is an 18-month program. All programs include practical training and internship opportunities.",
+  },
+  {
+    question: "Do you provide hostel accommodation?",
+    answer: "Yes, we have separate hostel facilities for boys and girls with modern amenities. Hostel accommodation is optional and charged separately from the program fee.",
+  },
+  {
+    question: "What documents are required for admission?",
+    answer: "You&apos;ll need 10th and 12th mark sheets, valid ID proof (Aadhar/Passport), passport-size photographs, medical fitness certificate, and any additional certificates you may have.",
+  },
+  {
+    question: "Can I visit the campus before enrolling?",
+    answer: "Absolutely! We encourage campus visits. You can schedule a campus tour where you&apos;ll see our training facilities, meet faculty, and attend a demo class. Contact our admissions team to book a visit.",
+  },
+  {
+    question: "What is the application process?",
+    answer: "Step 1: Submit enquiry form. Step 2: Our counselor calls you within 24 hours. Step 3: Campus visit or virtual tour. Step 4: Document submission and fee payment. Step 5: Admission confirmation and batch allotment.",
+  },
+]
+
+const postApplySteps = [
+  {
+    step: 1,
+    title: "We Call You",
+    description: "Within 24 hours, our admissions counselor will contact you to understand your goals and answer questions.",
+    icon: Phone,
+  },
+  {
+    step: 2,
+    title: "Campus Visit",
+    description: "Schedule a campus tour or virtual walkthrough. See our training facilities and meet the faculty.",
+    icon: Users,
+  },
+  {
+    step: 3,
+    title: "Enrollment",
+    description: "Complete documentation, choose your payment plan, and secure your seat in the upcoming batch.",
+    icon: FileText,
+  },
+]
+
+export default function ContactPage() {
+  const [step, setStep] = useState(1)
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    course: "",
+    batch: "",
+    whatsapp: true,
+  })
+  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [expandedFaq, setExpandedFaq] = useState<number | null>(null)
+
+  const handleNext = () => {
+    if (step < 3) setStep(step + 1)
+    else handleSubmit()
+  }
+
+  const handleSubmit = () => {
+    console.log("[v0] Form submitted:", formData)
+    setIsSubmitted(true)
+  }
+
+  const canProceed = () => {
+    switch (step) {
+      case 1:
+        return formData.name && formData.phone
+      case 2:
+        return formData.course
+      case 3:
+        return true
+      default:
+        return false
+    }
+  }
+
+  return (
+    <div className="pt-20">
+      {/* Hero Section */}
+      <section className="bg-navy-deep py-16 lg:py-20 section-navy">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="text-gold-primary font-semibold tracking-wide uppercase text-sm mb-4">
+              Get Started
+            </p>
+            <h1 className="text-white text-balance mb-4">
+              Begin Your Journey Today
+            </h1>
+            <p className="text-navy-light text-lg">
+              Fill out the form below and our admissions team will guide you through every step of the enrollment process.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <section className="py-16 lg:py-24 bg-cream">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Form Section */}
+            <div>
+              {isSubmitted ? (
+                <div className="bg-white rounded-2xl p-8 lg:p-12 text-center">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <CheckCircle className="h-8 w-8 text-green-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-navy-deep mb-4">Application Received!</h2>
+                  <p className="text-navy-muted mb-6">
+                    Thank you for your interest in GSIHM. Our admissions team will contact you within 24 hours to discuss the next steps.
+                  </p>
+                  <div className="bg-gold-pale rounded-lg p-4 mb-6">
+                    <p className="text-sm text-navy-muted">
+                      <strong>What happens next?</strong> Our counselor will call you to schedule a campus visit or virtual tour, discuss program details, and guide you through the enrollment process.
+                    </p>
+                  </div>
+                  <Button asChild className="bg-gold-primary text-navy-deep hover:bg-gold-soft">
+                    <Link href="/">Return to Home</Link>
+                  </Button>
+                </div>
+              ) : (
+                <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-lg">
+                  <h2 className="text-2xl font-bold text-navy-deep mb-2">Apply Now</h2>
+                  <p className="text-navy-muted mb-6">3-step quick application</p>
+
+                  {/* Progress Bar */}
+                  <div className="flex gap-2 mb-8">
+                    {[1, 2, 3].map((s) => (
+                      <div
+                        key={s}
+                        className={cn(
+                          "flex-1 h-2 rounded-full transition-colors",
+                          s <= step ? "bg-gold-primary" : "bg-navy-light"
+                        )}
+                      />
+                    ))}
+                  </div>
+
+                  {/* Step 1: Personal Info */}
+                  {step === 1 && (
+                    <div className="space-y-5">
+                      <h3 className="font-semibold text-navy-deep">Personal Information</h3>
+                      <Input
+                        type="text"
+                        placeholder="Full Name *"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        className="h-12 border-navy-light focus:border-gold-primary"
+                      />
+                      <Input
+                        type="email"
+                        placeholder="Email Address"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        className="h-12 border-navy-light focus:border-gold-primary"
+                      />
+                      <Input
+                        type="tel"
+                        placeholder="Phone Number *"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        className="h-12 border-navy-light focus:border-gold-primary"
+                      />
+                    </div>
+                  )}
+
+                  {/* Step 2: Course Interest */}
+                  {step === 2 && (
+                    <div className="space-y-5">
+                      <h3 className="font-semibold text-navy-deep">Course Interest</h3>
+                      <div className="space-y-3">
+                        {courses.map((course) => (
+                          <button
+                            key={course.value}
+                            onClick={() => setFormData({ ...formData, course: course.value })}
+                            className={cn(
+                              "w-full flex items-center justify-between p-4 rounded-lg border transition-colors text-left",
+                              formData.course === course.value
+                                ? "border-gold-primary bg-gold-pale"
+                                : "border-navy-light hover:border-gold-primary"
+                            )}
+                          >
+                            <span className="font-medium text-navy-deep">{course.label}</span>
+                            {formData.course === course.value && (
+                              <CheckCircle className="h-5 w-5 text-gold-primary" />
+                            )}
+                          </button>
+                        ))}
+                      </div>
+                      <div>
+                        <label className="block text-sm text-navy-muted mb-2">Preferred Batch</label>
+                        <select
+                          value={formData.batch}
+                          onChange={(e) => setFormData({ ...formData, batch: e.target.value })}
+                          className="w-full h-12 px-3 rounded-lg border border-navy-light focus:border-gold-primary bg-white text-navy-deep"
+                        >
+                          <option value="">Select Batch (Optional)</option>
+                          {batches.map((batch) => (
+                            <option key={batch.value} value={batch.value}>
+                              {batch.label}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Step 3: Confirm */}
+                  {step === 3 && (
+                    <div className="space-y-5">
+                      <h3 className="font-semibold text-navy-deep">Confirm Details</h3>
+                      <div className="bg-cream rounded-lg p-4 space-y-3">
+                        <div className="flex justify-between text-sm">
+                          <span className="text-navy-muted">Name</span>
+                          <span className="font-medium text-navy-deep">{formData.name}</span>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-navy-muted">Phone</span>
+                          <span className="font-medium text-navy-deep">{formData.phone}</span>
+                        </div>
+                        {formData.email && (
+                          <div className="flex justify-between text-sm">
+                            <span className="text-navy-muted">Email</span>
+                            <span className="font-medium text-navy-deep">{formData.email}</span>
+                          </div>
+                        )}
+                        <div className="flex justify-between text-sm">
+                          <span className="text-navy-muted">Course</span>
+                          <span className="font-medium text-navy-deep">
+                            {courses.find((c) => c.value === formData.course)?.label}
+                          </span>
+                        </div>
+                        {formData.batch && (
+                          <div className="flex justify-between text-sm">
+                            <span className="text-navy-muted">Preferred Batch</span>
+                            <span className="font-medium text-navy-deep">
+                              {batches.find((b) => b.value === formData.batch)?.label}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <input
+                          type="checkbox"
+                          id="whatsapp"
+                          checked={formData.whatsapp}
+                          onChange={(e) => setFormData({ ...formData, whatsapp: e.target.checked })}
+                          className="w-4 h-4 rounded border-navy-light text-gold-primary focus:ring-gold-primary"
+                        />
+                        <label htmlFor="whatsapp" className="text-sm text-navy-muted">
+                          Receive updates via WhatsApp
+                        </label>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Navigation */}
+                  <div className="flex gap-4 mt-8">
+                    {step > 1 && (
+                      <Button
+                        variant="outline"
+                        onClick={() => setStep(step - 1)}
+                        className="flex-1 h-12 border-navy-mid"
+                      >
+                        Back
+                      </Button>
+                    )}
+                    <Button
+                      onClick={handleNext}
+                      disabled={!canProceed()}
+                      className="flex-1 h-12 bg-gold-primary text-navy-deep hover:bg-gold-soft font-semibold disabled:opacity-50"
+                    >
+                      {step === 3 ? "Submit Application" : "Continue"}
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Contact Info */}
+            <div className="space-y-8">
+              {/* Contact Channels */}
+              <div className="bg-white rounded-xl p-6 lg:p-8">
+                <h3 className="text-xl font-bold text-navy-deep mb-6">Contact Us Directly</h3>
+                <div className="space-y-4">
+                  <a
+                    href="https://wa.me/919876543210"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 p-4 rounded-lg bg-green-50 hover:bg-green-100 transition-colors"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center">
+                      <MessageCircle className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-navy-deep">WhatsApp (Preferred)</p>
+                      <p className="text-sm text-navy-muted">+91 98765 43210</p>
+                    </div>
+                  </a>
+                  <a
+                    href="tel:+919876543210"
+                    className="flex items-center gap-4 p-4 rounded-lg bg-cream hover:bg-navy-light/50 transition-colors"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-navy-mid flex items-center justify-center">
+                      <Phone className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-navy-deep">Call Us</p>
+                      <p className="text-sm text-navy-muted">+91 98765 43210</p>
+                    </div>
+                  </a>
+                  <a
+                    href="mailto:admissions@gsihm.edu.in"
+                    className="flex items-center gap-4 p-4 rounded-lg bg-cream hover:bg-navy-light/50 transition-colors"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-navy-mid flex items-center justify-center">
+                      <Mail className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-navy-deep">Email</p>
+                      <p className="text-sm text-navy-muted">admissions@gsihm.edu.in</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              {/* Office Hours */}
+              <div className="bg-white rounded-xl p-6 lg:p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <Clock className="h-5 w-5 text-gold-primary" />
+                  <h3 className="text-lg font-bold text-navy-deep">Office Hours</h3>
+                </div>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-navy-muted">Monday - Friday</span>
+                    <span className="font-medium text-navy-deep">9:00 AM - 6:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-navy-muted">Saturday</span>
+                    <span className="font-medium text-navy-deep">9:00 AM - 2:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-navy-muted">Sunday</span>
+                    <span className="font-medium text-navy-muted">Closed</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Map */}
+              <div className="bg-white rounded-xl overflow-hidden">
+                <div className="p-4 border-b border-navy-light">
+                  <div className="flex items-start gap-3">
+                    <MapPin className="h-5 w-5 text-gold-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-navy-deep">Campus Address</p>
+                      <p className="text-sm text-navy-muted">
+                        123 Education Avenue, Knowledge Park,<br />
+                        New Delhi - 110001
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="h-48 bg-navy-light flex items-center justify-center">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.567891234567!2d77.2090212!3d28.6139391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM2JzUwLjIiTiA3N8KwMTInMzIuNSJF!5e0!3m2!1sen!2sin!4v1234567890"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="GSIHM Campus Location"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Post-Apply Process */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-gold-primary font-semibold tracking-wide uppercase text-sm mb-4">
+              What Happens Next
+            </p>
+            <h2 className="mb-4">After You Apply</h2>
+            <p className="text-navy-muted text-lg">
+              We make the enrollment process simple and stress-free.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {postApplySteps.map((item, index) => (
+              <div key={item.step} className="relative text-center">
+                <div className="w-16 h-16 rounded-full bg-gold-pale flex items-center justify-center mx-auto mb-4">
+                  <item.icon className="h-7 w-7 text-gold-primary" />
+                </div>
+                <div className="absolute top-8 left-1/2 w-full h-0.5 bg-navy-light -z-10 hidden md:block last:hidden" style={{ display: index === postApplySteps.length - 1 ? "none" : undefined }} />
+                <span className="inline-block bg-gold-primary text-navy-deep text-sm font-bold w-6 h-6 rounded-full mb-3">
+                  {item.step}
+                </span>
+                <h3 className="text-lg font-bold text-navy-deep mb-2">{item.title}</h3>
+                <p className="text-navy-muted text-sm">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 lg:py-24 bg-cream">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-gold-primary font-semibold tracking-wide uppercase text-sm mb-4">
+              FAQs
+            </p>
+            <h2 className="mb-4">Frequently Asked Questions</h2>
+            <p className="text-navy-muted text-lg">
+              Get answers to common questions about admission, fees, and placements.
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto space-y-3">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-white rounded-lg border border-navy-light overflow-hidden">
+                <button
+                  onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
+                  className="w-full flex items-center justify-between p-5 text-left hover:bg-cream transition-colors"
+                >
+                  <span className="font-semibold text-navy-deep pr-4">{faq.question}</span>
+                  <ChevronDown
+                    className={cn(
+                      "h-5 w-5 text-navy-muted flex-shrink-0 transition-transform",
+                      expandedFaq === index && "rotate-180"
+                    )}
+                  />
+                </button>
+                {expandedFaq === index && (
+                  <div className="px-5 pb-5 border-t border-navy-light pt-4">
+                    <p className="text-navy-muted">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
