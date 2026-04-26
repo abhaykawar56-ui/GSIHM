@@ -222,22 +222,25 @@ export default function CoursesPage() {
         </div>
       </section>
 
-      {/* Program Tabs */}
-      <section className="bg-white border-b border-navy-light sticky top-16 lg:top-20 z-40">
+      {/* Program Selection Tabs */}
+      <section className="py-12 lg:py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex overflow-x-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl lg:text-4xl font-bold text-navy-deep">Explore Our Programs</h2>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4">
             {programs.map((program) => (
               <button
                 key={program.id}
                 onClick={() => setActiveTab(program.id)}
                 className={cn(
-                  "flex items-center gap-2 px-6 py-4 text-sm font-semibold whitespace-nowrap border-b-2 transition-colors",
+                  "flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300",
                   activeTab === program.id
-                    ? "border-gold-primary text-gold-primary"
-                    : "border-transparent text-navy-muted hover:text-navy-deep"
+                    ? "bg-navy-deep text-white shadow-lg"
+                    : "bg-white text-navy-deep border-2 border-navy-light hover:border-navy-deep"
                 )}
               >
-                <program.icon className="h-4 w-4" />
+                <program.icon className="h-5 w-5" />
                 {program.title}
               </button>
             ))}
