@@ -15,10 +15,11 @@ const programs = [
     icon: Plane,
     color: "aviation",
     image: "/images/aviation-course.jpg",
-    overview: "Our comprehensive Aviation program prepares you for a prestigious career in the skies. With hands-on training in mock aircraft cabins and industry partnerships with leading airlines, you&apos;ll be ready to take flight.",
+    overview: "Our comprehensive Aviation program prepares you for a prestigious career in the skies. With hands-on training in mock aircraft cabins and industry partnerships with leading airlines, you'll be ready to take flight.",
     duration: "12 Months",
     eligibility: "10+2 from any stream, Age 18-27",
     fee: "₹1,80,000",
+    placementAssistance: "Interview Preparation & Airline Career Guidance",
     batchDates: ["July 2024", "October 2024", "January 2025"],
     curriculum: [
       { title: "Aviation Fundamentals", topics: ["History of Aviation", "Aircraft Types & Components", "Aviation Terminology", "Airline Industry Overview"] },
@@ -49,6 +50,7 @@ const programs = [
     duration: "18 Months",
     eligibility: "10+2 from any stream, Age 18-28",
     fee: "₹2,40,000",
+    placementAssistance: "Hotel Industry Training & Career Guidance",
     batchDates: ["August 2024", "November 2024", "February 2025"],
     curriculum: [
       { title: "Front Office Operations", topics: ["Reception & Check-in", "Reservation Systems", "Guest Relations", "Revenue Management"] },
@@ -79,6 +81,7 @@ const programs = [
     duration: "12 Months",
     eligibility: "10+2 from any stream, Age 18-28, Swimming Proficiency",
     fee: "₹2,80,000",
+    placementAssistance: "Cruise Line Interview Preparation & Career Support",
     batchDates: ["September 2024", "December 2024", "March 2025"],
     curriculum: [
       { title: "Cruise Industry Overview", topics: ["Global Cruise Lines", "Ship Departments", "Maritime Regulations", "Cruise Itineraries"] },
@@ -285,9 +288,9 @@ export default function CoursesPage() {
                   <p className="font-semibold text-navy-deep text-sm">{activeProgram.eligibility}</p>
                 </div>
                 <div className="bg-white rounded-lg p-5 border border-navy-light">
-                  <Calendar className="h-5 w-5 text-gold-primary mb-2" />
-                  <p className="text-sm text-navy-muted">Program Fee</p>
-                  <p className="font-semibold text-navy-deep">{activeProgram.fee}</p>
+                  <Briefcase className="h-5 w-5 text-gold-primary mb-2" />
+                  <p className="text-sm text-navy-muted">Placement Assistance</p>
+                  <p className="font-semibold text-navy-deep text-sm">{activeProgram.placementAssistance}</p>
                 </div>
               </div>
 
