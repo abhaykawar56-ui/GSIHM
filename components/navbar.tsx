@@ -38,9 +38,9 @@ export function Navbar() {
       )}
     >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-auto items-center justify-between py-2 lg:py-3">
-          {/* Logo - Left corner */}
-          <Link href="/" className="flex items-center gap-2 flex-shrink-0 -ml-4">
+        <div className="flex h-20 items-center justify-between lg:h-20">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2 flex-shrink-0">
             <Image
               src="/images/gsihm-logo.png"
               alt="GSIHM Logo"
@@ -51,8 +51,8 @@ export function Navbar() {
             />
           </Link>
 
-          {/* Desktop Navigation - Right side */}
-          <div className="hidden lg:flex lg:items-center lg:gap-8 lg:ml-auto">
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex lg:items-center lg:gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -79,7 +79,7 @@ export function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-navy-deep ml-auto"
+            className="lg:hidden p-2 text-navy-deep"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
