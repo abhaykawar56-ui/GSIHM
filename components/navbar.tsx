@@ -44,9 +44,9 @@ export function Navbar() {
             <Image
               src="/images/gsihm-logo.png"
               alt="GSIHM Logo"
-              width={400}
-              height={160}
-              className="h-32 w-auto"
+              width={480}
+              height={200}
+              className="h-40 w-auto"
             />
           </Link>
 
