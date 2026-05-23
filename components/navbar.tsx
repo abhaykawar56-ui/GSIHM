@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -40,12 +41,13 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <span className={cn(
-              "text-xl font-bold tracking-tight transition-colors",
-              isScrolled ? "text-navy-deep" : "text-navy-deep"
-            )}>
-              GSIHM
-            </span>
+            <Image
+              src="/images/gsihm-logo.png"
+              alt="GSIHM Logo"
+              width={120}
+              height={50}
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
