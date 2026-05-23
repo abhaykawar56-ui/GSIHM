@@ -38,15 +38,15 @@ export function Navbar() {
       )}
     >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between lg:h-24">
+        <div className="flex h-32 items-center justify-between lg:h-32">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 flex-shrink-0">
             <Image
               src="/images/gsihm-logo.png"
               alt="GSIHM Logo"
-              width={160}
-              height={80}
-              className="h-20 w-auto"
+              width={240}
+              height={120}
+              className="h-28 w-auto"
             />
           </Link>
 
