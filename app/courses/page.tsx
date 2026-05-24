@@ -412,10 +412,10 @@ export default function CoursesPage() {
                 <p className="text-navy-light text-sm mb-6">
                   Secure your seat in the next batch. Limited seats available.
                 </p>
-                <Button asChild className="w-full bg-gold-primary text-navy-deep hover:bg-gold-soft font-semibold">
+                <Button asChild className="w-full bg-gold-primary text-white hover:bg-gold-soft font-semibold">
                   <Link href="/contact">Apply Now</Link>
                 </Button>
-                <Button asChild variant="outline" className="w-full mt-3 border-navy-light text-white hover:bg-navy-mid">
+                <Button asChild variant="outline" className="w-full mt-3 border-gold-primary text-gold-primary hover:bg-gold-primary hover:text-navy-deep font-semibold">
                   <Link href="/contact">Download Brochure</Link>
                 </Button>
               </div>
