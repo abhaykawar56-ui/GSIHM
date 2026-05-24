@@ -15,7 +15,6 @@ const courses = [
     description: "Soar to new heights with our comprehensive aviation training program. Become a cabin crew member or ground staff at leading airlines.",
     duration: "12 Months",
     eligibility: "10+2 Pass",
-    feeRange: "₹1.5L - ₹2.5L",
     icon: Plane,
     image: "/images/aviation-course.jpg",
     color: "aviation",
@@ -28,7 +27,6 @@ const courses = [
     description: "Master the art of hospitality with hands-on training at 5-star properties. From front desk to F&B management.",
     duration: "18 Months",
     eligibility: "10+2 Pass",
-    feeRange: "₹2L - ₹3L",
     icon: Building2,
     image: "/images/hotel-course.jpg",
     color: "hotel",
@@ -41,7 +39,6 @@ const courses = [
     description: "Embark on a global adventure with our cruise management program. Work on luxury cruise liners worldwide.",
     duration: "12 Months",
     eligibility: "10+2 Pass",
-    feeRange: "₹2.5L - ₹3.5L",
     icon: Ship,
     image: "/images/cruise-course.jpg",
     color: "cruise",
@@ -110,10 +107,6 @@ export function CourseCards() {
                   <div className="flex justify-between text-sm">
                     <span className="text-navy-muted">Eligibility</span>
                     <span className="font-medium text-navy-deep">{course.eligibility}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-navy-muted">Fee Range</span>
-                    <span className="font-medium text-navy-deep">{course.feeRange}</span>
                   </div>
                 </div>
 
