@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { Filter, Play, ChevronRight, Briefcase, TrendingUp, Users, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
