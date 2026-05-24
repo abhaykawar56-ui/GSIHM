@@ -203,55 +203,29 @@ export default function PlacementsPage() {
 
           {/* Students Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {filteredStudents.map((student, index) => {
-              const initials = student.name
-                .split(" ")
-                .map((n) => n[0])
-                .join("")
-                .slice(0, 2)
-                .toUpperCase()
-              return (
-                <div
-                  key={index}
-                  className="relative rounded-xl p-5 flex flex-col gap-4 hover:scale-[1.02] transition-transform"
-                  style={{ backgroundColor: "#1a2540" }}
-                >
-                  {/* Category badge */}
-                  <span
-                    className="absolute top-3 right-3 text-navy-deep text-xs font-bold px-2.5 py-1 rounded"
-                    style={{ backgroundColor: "#C9A84C" }}
-                  >
-                    {student.course.toUpperCase()}
-                  </span>
-
-                  {/* Avatar */}
-                  <div
-                    className="w-12 h-12 rounded-full flex items-center justify-center text-navy-deep font-bold text-sm flex-shrink-0"
-                    style={{ backgroundColor: "#C9A84C" }}
-                  >
-                    {initials}
-                  </div>
-
-                  {/* Name & Role */}
-                  <div className="flex flex-col gap-0.5">
-                    <p className="font-semibold text-white text-sm leading-tight">{student.name}</p>
-                    <p className="text-sm" style={{ color: "rgba(255,255,255,0.45)" }}>{student.role}</p>
-                  </div>
-
-                  {/* Footer: company + year */}
-                  <div className="flex items-center justify-between mt-auto pt-2" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-                    <div className="flex items-center gap-1.5">
-                      <div
-                        className="w-2 h-2 rounded-full flex-shrink-0"
-                        style={{ backgroundColor: "#C9A84C" }}
-                      />
-                      <span className="text-xs font-medium text-white">{student.company}</span>
-                    </div>
-                    <span className="text-xs" style={{ color: "rgba(255,255,255,0.4)" }}>{student.year}</span>
+            {filteredStudents.map((student, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+              >
+                <div className="relative h-48">
+                  <Image
+                    src={student.image}
+                    alt={student.name}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-xs font-medium text-navy-deep">
+                    {student.year}
                   </div>
                 </div>
-              )
-            })}
+                <div className="p-4">
+                  <p className="font-semibold text-navy-deep">{student.name}</p>
+                  <p className="text-gold-primary text-sm font-medium">{student.company}</p>
+                  <p className="text-navy-muted text-sm">{student.role}</p>
+                </div>
+              </div>
+            ))}
           </div>
 
           {filteredStudents.length === 0 && (
