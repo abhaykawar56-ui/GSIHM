@@ -408,14 +408,14 @@ export default function CoursesPage() {
 
               {/* CTA */}
               <div className="bg-navy-deep rounded-xl p-6 text-white">
-                <h3 className="text-xl font-bold mb-3">Ready to Apply?</h3>
+                <h3 className="text-xl font-bold mb-3 text-white">Ready to Apply?</h3>
                 <p className="text-navy-light text-sm mb-6">
                   Secure your seat in the next batch. Limited seats available.
                 </p>
-                <Button asChild className="w-full bg-gold-primary text-white hover:bg-gold-soft font-semibold">
+                <Button asChild className="w-full bg-gold-primary text-navy-deep hover:bg-gold-soft font-semibold">
                   <Link href="/contact">Apply Now</Link>
                 </Button>
-                <Button asChild variant="outline" className="w-full mt-3 border-gold-primary text-gold-primary hover:bg-gold-primary hover:text-navy-deep font-semibold">
+                <Button asChild variant="outline" className="w-full mt-3 border-gold-primary text-gold-primary bg-navy-deep hover:bg-gold-primary hover:text-navy-deep font-semibold">
                   <Link href="/contact">Download Brochure</Link>
                 </Button>
               </div>
