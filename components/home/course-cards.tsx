@@ -25,7 +25,7 @@ const courses = [
     title: "Hotel Management",
     subtitle: "Luxury Hospitality Training",
     description: "Master the art of hospitality with hands-on training at 5-star properties. From front desk to F&B management.",
-    duration: "18 Months",
+    duration: "12 Months",
     eligibility: "10+2 Pass",
     icon: Building2,
     image: "/images/hotel-course.jpg",
