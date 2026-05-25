@@ -37,16 +37,16 @@ export function Footer() {
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-gold-primary flex-shrink-0 mt-0.5" />
                 <span className="text-navy-light text-sm">
-                  123 Education Avenue, Knowledge Park, New Delhi - 110001
+                  Parijat Rd, Dabgram Fullbari, Fullbari, Dabgram, Panchanai, West Bengal 734002
                 </span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-gold-primary flex-shrink-0" />
-                <span className="text-navy-light text-sm">+91 98765 43210</span>
+                <span className="text-navy-light text-sm">+91 90025 37266 / +91 62964 03223</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-gold-primary flex-shrink-0" />
-                <span className="text-navy-light text-sm">admissions@gsihm.edu.in</span>
+                <span className="text-navy-light text-sm">gsihm111@gmail.com</span>
               </div>
             </div>
           </div>
