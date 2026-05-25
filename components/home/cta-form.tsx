@@ -70,7 +70,7 @@ export function CTAForm() {
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-gold-primary flex-shrink-0" />
-                    <span className="text-navy-light">Scholarship eligibility check</span>
+                    <span className="text-navy-light">Career roadmap session</span>
                   </li>
                 </ul>
               </div>
