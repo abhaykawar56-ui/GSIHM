@@ -58,15 +58,15 @@ export function Hero() {
             {/* Quick Stats */}
             <div className="flex flex-wrap gap-8 pt-4">
               <div>
-                <p className="text-3xl font-bold text-navy-deep">200+</p>
+                <p className="text-3xl font-bold text-navy-deep">17+</p>
                 <p className="text-sm text-navy-muted">Batches Trained</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-navy-deep">4.8</p>
+                <p className="text-3xl font-bold text-navy-deep">4.9</p>
                 <p className="text-sm text-navy-muted">Google Rating</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-navy-deep">12+</p>
+                <p className="text-3xl font-bold text-navy-deep">4+</p>
                 <p className="text-sm text-navy-muted">MOU Partners</p>
               </div>
             </div>
@@ -89,7 +89,7 @@ export function Hero() {
             <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-lg hidden md:block">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-gold-pale flex items-center justify-center">
-                  <span className="text-gold-primary font-bold text-lg">5k+</span>
+                  <span className="text-gold-primary font-bold text-lg">3k+</span>
                 </div>
                 <div>
                   <p className="font-semibold text-navy-deep text-sm">Students Placed</p>

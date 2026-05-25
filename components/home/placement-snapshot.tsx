@@ -81,21 +81,21 @@ export function PlacementSnapshot() {
           </div>
           <div className="text-center">
             <p className="text-4xl md:text-5xl font-bold text-gold-primary">
-              <AnimatedCounter end={5000} />+
+              <AnimatedCounter end={3000} />+
             </p>
             <p className="text-navy-light mt-2">Students Placed</p>
           </div>
           <div className="text-center">
             <p className="text-4xl md:text-5xl font-bold text-gold-primary">
-              <AnimatedCounter end={50} />+
+              <AnimatedCounter end={4} />+
             </p>
-            <p className="text-navy-light mt-2">Partner Companies</p>
+            <p className="text-navy-light mt-2">MOU Partners</p>
           </div>
           <div className="text-center">
             <p className="text-4xl md:text-5xl font-bold text-gold-primary">
-              <AnimatedCounter end={12} />
+              <AnimatedCounter end={17} />+
             </p>
-            <p className="text-navy-light mt-2">Countries</p>
+            <p className="text-navy-light mt-2">Batches Completed</p>
           </div>
         </div>
 

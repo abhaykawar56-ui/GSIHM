@@ -3,16 +3,16 @@
 import { Shield, Award, Star, Users } from "lucide-react"
 
 const accreditations = [
-  { name: "NSQF", icon: Shield },
-  { name: "ISO 9001:2015", icon: Award },
-  { name: "AICTE Recognized", icon: Award },
+  { name: "MSME Registered", icon: Shield },
+  { name: "ISO Certified", icon: Award },
+  { name: "CVESD Affiliated", icon: Award },
   { name: "Skill India", icon: Users },
 ]
 
 const stats = [
-  { value: "200+", label: "Batches Trained" },
-  { value: "4.8★", label: "Google Reviews" },
-  { value: "12+", label: "MOU Partners" },
+  { value: "17+", label: "Batches Trained" },
+  { value: "4.9★", label: "Google Rating" },
+  { value: "4+", label: "MOU Partners" },
   { value: "100%", label: "Placement Rate" },
 ]
 
