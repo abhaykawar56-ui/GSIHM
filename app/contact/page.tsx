@@ -395,7 +395,7 @@ export default function ContactPage() {
                 </div>
                 <div className="h-48 bg-navy-light">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.5!2d88.4!3d26.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDQyJzAwLjAiTiA4OMKwMjQnMDAuMCJF!5e0!3m2!1sen!2sin!4v1"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.5!2d88.4209!3d26.7195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e441c7c7d7b1b7%3A0x0!2zUGFyaWphdCBSZCwgRGFiZ3JhbSBGdWxsYmFyaSwgV2VzdCBCZW5nYWwgNzM0MDAy!5e0!3m2!1sen!2sin!4v1"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -406,7 +406,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <a
-                  href="https://share.google/Yuo5Ju7FcKqcDcF3O"
+                  href="https://maps.app.goo.gl/7B9epiBuz9EDy6eHA"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block p-3 text-center text-sm font-medium text-gold-primary hover:bg-gold-pale transition-colors"
