@@ -56,7 +56,7 @@ export function Hero() {
             </div>
 
             {/* Quick Stats */}
-            <div className="flex flex-wrap gap-8 pt-4">
+            <div className="grid grid-cols-3 gap-4 pt-4">
               <div>
                 <p className="text-3xl font-bold text-navy-deep">17+</p>
                 <p className="text-sm text-navy-muted">Batches Trained</p>
