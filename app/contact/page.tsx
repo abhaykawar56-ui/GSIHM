@@ -321,7 +321,7 @@ export default function ContactPage() {
                 <h3 className="text-xl font-bold text-navy-deep mb-6">Contact Us Directly</h3>
                 <div className="space-y-4">
                   <a
-                    href="https://wa.me/919876543210"
+                    href="https://wa.me/919002537266"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 rounded-lg bg-green-50 hover:bg-green-100 transition-colors"
@@ -331,11 +331,11 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-navy-deep">WhatsApp (Preferred)</p>
-                      <p className="text-sm text-navy-muted">+91 98765 43210</p>
+                      <p className="text-sm text-navy-muted">+91 90025 37266</p>
                     </div>
                   </a>
                   <a
-                    href="tel:+919876543210"
+                    href="tel:+919002537266"
                     className="flex items-center gap-4 p-4 rounded-lg bg-cream hover:bg-navy-light/50 transition-colors"
                   >
                     <div className="w-12 h-12 rounded-full bg-navy-mid flex items-center justify-center">
@@ -343,11 +343,11 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-navy-deep">Call Us</p>
-                      <p className="text-sm text-navy-muted">+91 98765 43210</p>
+                      <p className="text-sm text-navy-muted">+91 90025 37266 / +91 62964 03223</p>
                     </div>
                   </a>
                   <a
-                    href="mailto:admissions@gsihm.edu.in"
+                    href="mailto:gsihm111@gmail.com"
                     className="flex items-center gap-4 p-4 rounded-lg bg-cream hover:bg-navy-light/50 transition-colors"
                   >
                     <div className="w-12 h-12 rounded-full bg-navy-mid flex items-center justify-center">
@@ -355,7 +355,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-navy-deep">Email</p>
-                      <p className="text-sm text-navy-muted">admissions@gsihm.edu.in</p>
+                      <p className="text-sm text-navy-muted">gsihm111@gmail.com</p>
                     </div>
                   </a>
                 </div>
@@ -369,12 +369,8 @@ export default function ContactPage() {
                 </div>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-navy-muted">Monday - Friday</span>
-                    <span className="font-medium text-navy-deep">9:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-navy-muted">Saturday</span>
-                    <span className="font-medium text-navy-deep">9:00 AM - 2:00 PM</span>
+                    <span className="text-navy-muted">Monday - Saturday</span>
+                    <span className="font-medium text-navy-deep">10:00 AM - 6:00 PM</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-navy-muted">Sunday</span>
@@ -391,15 +387,15 @@ export default function ContactPage() {
                     <div>
                       <p className="font-semibold text-navy-deep">Campus Address</p>
                       <p className="text-sm text-navy-muted">
-                        123 Education Avenue, Knowledge Park,<br />
-                        New Delhi - 110001
+                        Parijat Rd, Dabgram Fullbari, Fullbari,<br />
+                        Dabgram, Panchanai, West Bengal 734002
                       </p>
                     </div>
                   </div>
                 </div>
-                <div className="h-48 bg-navy-light flex items-center justify-center">
+                <div className="h-48 bg-navy-light">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.567891234567!2d77.2090212!3d28.6139391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM2JzUwLjIiTiA3N8KwMTInMzIuNSJF!5e0!3m2!1sen!2sin!4v1234567890"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.5!2d88.4!3d26.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDQyJzAwLjAiTiA4OMKwMjQnMDAuMCJF!5e0!3m2!1sen!2sin!4v1"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -409,6 +405,14 @@ export default function ContactPage() {
                     title="GSIHM Campus Location"
                   />
                 </div>
+                <a
+                  href="https://share.google/Yuo5Ju7FcKqcDcF3O"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-3 text-center text-sm font-medium text-gold-primary hover:bg-gold-pale transition-colors"
+                >
+                  Open in Google Maps
+                </a>
               </div>
             </div>
           </div>
