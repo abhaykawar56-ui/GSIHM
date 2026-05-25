@@ -27,13 +27,6 @@ const faculty = [
     image: "/images/faculty-3.jpg",
     credentials: "Ex-GM, Taj Hotels",
   },
-  {
-    name: "Priya Rajan",
-    role: "Head - Cruise Training",
-    experience: "12 years on cruise liners",
-    image: "/images/faculty-4.jpg",
-    credentials: "Former Carnival Cruises Trainer",
-  },
 ]
 
 const milestones = [
@@ -233,7 +226,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {faculty.map((member) => (
               <div key={member.name} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
                 <div className="relative h-64">
