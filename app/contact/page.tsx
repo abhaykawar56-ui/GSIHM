@@ -86,6 +86,7 @@ export default function ContactPage() {
     whatsapp: true,
   })
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null)
 
   const handleNext = () => {
@@ -93,9 +94,31 @@ export default function ContactPage() {
     else handleSubmit()
   }
 
-  const handleSubmit = () => {
-    console.log("[v0] Form submitted:", formData)
-    setIsSubmitted(true)
+  const handleSubmit = async () => {
+    setIsSubmitting(true)
+    
+    try {
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          source: "contact_page",
+        }),
+      })
+      
+      if (response.ok) {
+        setIsSubmitted(true)
+      } else {
+        console.error("[v0] Failed to submit lead")
+      }
+    } catch (error) {
+      console.error("[v0] Error submitting lead:", error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const canProceed = () => {
@@ -303,11 +326,11 @@ export default function ContactPage() {
                     )}
                     <Button
                       onClick={handleNext}
-                      disabled={!canProceed()}
+                      disabled={!canProceed() || isSubmitting}
                       className="flex-1 h-12 bg-gold-primary text-navy-deep hover:bg-gold-soft font-semibold disabled:opacity-50"
                     >
-                      {step === 3 ? "Submit Application" : "Continue"}
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      {step === 3 ? (isSubmitting ? "Submitting..." : "Submit Application") : "Continue"}
+                      {!isSubmitting && <ArrowRight className="ml-2 h-4 w-4" />}
                     </Button>
                   </div>
                 </div>

@@ -20,11 +20,34 @@ export function CTAForm() {
     whatsapp: true,
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("[v0] Form submitted:", formData)
-    setIsSubmitted(true)
+    setIsSubmitting(true)
+    
+    try {
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          source: "homepage_cta",
+        }),
+      })
+      
+      if (response.ok) {
+        setIsSubmitted(true)
+      } else {
+        console.error("[v0] Failed to submit lead")
+      }
+    } catch (error) {
+      console.error("[v0] Error submitting lead:", error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (isSubmitted) {
@@ -128,10 +151,11 @@ export function CTAForm() {
                   </div>
                   <Button
                     type="submit"
-                    className="w-full h-12 bg-gold-primary text-navy-deep hover:bg-gold-soft font-semibold"
+                    disabled={isSubmitting}
+                    className="w-full h-12 bg-gold-primary text-navy-deep hover:bg-gold-soft font-semibold disabled:opacity-50"
                   >
-                    Submit Enquiry
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    {isSubmitting ? "Submitting..." : "Submit Enquiry"}
+                    {!isSubmitting && <ArrowRight className="ml-2 h-4 w-4" />}
                   </Button>
                 </form>
               </div>
