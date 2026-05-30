@@ -28,7 +28,7 @@ const courses = [
     duration: "12 Months",
     eligibility: "10+2 Pass",
     icon: Building2,
-    image: "/images/hotel-course.jpg",
+    image: "/images/hotel-course.png",
     color: "hotel",
     careers: ["Front Office", "F&B Service", "Housekeeping Manager"],
   },

@@ -45,7 +45,7 @@ const programs = [
     subtitle: "Luxury Hospitality Excellence",
     icon: Building2,
     color: "hotel",
-    image: "/images/hotel-course.jpg",
+    image: "/images/hotel-course.png",
     overview: "Master the art of luxury hospitality with our intensive Hotel Management program. From front office operations to food & beverage management, gain practical experience at 5-star properties.",
     duration: "18 Months",
     eligibility: "10+2 from any stream, Age 18-28",
