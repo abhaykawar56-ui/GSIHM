@@ -6,11 +6,11 @@ import { Star, Quote } from "lucide-react"
 const testimonials = [
   {
     id: 1,
-    name: "Priya Sharma",
-    role: "Cabin Crew, IndiGo",
-    course: "Aviation 2023",
-    image: "/images/testimonial-1.jpg",
-    quote: "GSIHM transformed my dream into reality. The training was world-class, and within 3 months of graduation, I was flying with IndiGo. The grooming sessions and mock interviews prepared me perfectly.",
+    name: "Dechen Sherpa",
+    role: "Food & Beverage, JW Marquis Dubai",
+    course: "Hotel Management 2025",
+    image: "/images/testimonial-dechen-sherpa.jpg",
+    quote: "The education provided out here in this particular institution is top notch and the employees out here are really cooperative, if you want a friendly environment along with top notch education this is the right place for you. And the placements are beyond expectations, trust me you'll not be disappointed, ps. HIGHLY RECOMMENDED FOR HOSPITALITY STUDENTS.",
     rating: 5,
   },
   {
