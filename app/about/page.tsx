@@ -30,11 +30,11 @@ const faculty = [
 ]
 
 const milestones = [
-  { year: "2010", title: "Foundation", description: "GSIHM was founded with a vision to transform hospitality education in India." },
-  { year: "2012", title: "First Batch", description: "Graduated our first batch with 100% placement in leading airlines and hotels." },
-  { year: "2015", title: "ISO Certification", description: "Achieved ISO 9001:2015 certification for quality management systems." },
-  { year: "2018", title: "NSQF Recognition", description: "Received National Skills Qualification Framework recognition." },
-  { year: "2020", title: "Cruise Program", description: "Launched specialized Cruise Management program with international partnerships." },
+  { year: "2018", title: "Foundation", description: "GSIHM was founded with a vision to transform hospitality education in India." },
+  { year: "2019", title: "First Batch", description: "Graduated our first batch with 100% placement in leading airlines and hotels." },
+  { year: "2020", title: "ISO Certification", description: "Achieved ISO 9001:2015 certification for quality management systems." },
+  { year: "2021", title: "NSQF Recognition", description: "Received National Skills Qualification Framework recognition." },
+  { year: "2022", title: "Cruise Program", description: "Launched specialized Cruise Management program with international partnerships." },
   { year: "2023", title: "5000+ Alumni", description: "Celebrated placing over 5000 students in hospitality careers worldwide." },
   { year: "2024", title: "New Campus", description: "Expanded to state-of-the-art training facilities with mock aircraft and hotel setups." },
 ]
@@ -144,7 +144,7 @@ export default function AboutPage() {
                 Our Story
               </p>
               <h1 className="text-balance mb-6">
-                Building Global Hospitality Leaders Since 2010
+                Building Global Hospitality Leaders Since 2018
               </h1>
               <p className="text-navy-muted text-lg leading-relaxed mb-6">
                 GSIHM was founded with a singular vision: to transform passionate individuals into world-class hospitality professionals. Over a decade later, we&apos;ve placed thousands of students in prestigious careers across aviation, hotels, and cruise industries.
