@@ -235,20 +235,20 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-6 overflow-x-auto pb-2">
+          <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-6 pb-2">
             {faculty.map((member) => (
               <div key={member.name} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-navy-light/30 flex flex-col">
-                <div className="relative h-40 flex-shrink-0">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                  />
+                {/* Image placeholder */}
+                <div className="relative h-48 flex-shrink-0 bg-navy-deep flex items-center justify-center">
+                  <div className="w-20 h-20 rounded-full bg-gold-primary flex items-center justify-center">
+                    <span className="text-navy-deep font-bold text-2xl">
+                      {member.name.split(" ").map((n: string) => n[0]).join("").slice(0, 2)}
+                    </span>
+                  </div>
                 </div>
                 <div className="p-4 flex flex-col flex-1">
-                  <h4 className="font-bold text-navy-deep text-sm line-clamp-2">{member.name}</h4>
-                  <p className="text-gold-primary text-xs font-medium mt-1 line-clamp-1">{member.role}</p>
+                  <h4 className="font-bold text-navy-deep text-sm">{member.name}</h4>
+                  <p className="text-gold-primary text-xs font-medium mt-1">{member.role}</p>
                   <p className="text-navy-muted text-xs mt-2 leading-relaxed line-clamp-4 flex-1">{member.description}</p>
                 </div>
               </div>
