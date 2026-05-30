@@ -9,23 +9,27 @@ const faculty = [
   {
     name: "Dr. Rajesh Kumar",
     role: "Director & Founder",
-    experience: "25+ years in Hospitality",
-    image: "/images/faculty-1.jpg",
-    credentials: "MBA, PhD in Hospitality Management",
+    description: "With over 25 years in the hospitality industry, Dr. Kumar founded GSIHM to bridge the gap between education and industry. He holds an MBA and PhD in Hospitality Management and has trained thousands of professionals across India.",
   },
   {
     name: "Sunita Mehta",
     role: "Head - Aviation Training",
-    experience: "15 years with major airlines",
-    image: "/images/faculty-2.jpg",
-    credentials: "Former IndiGo Training Manager",
+    description: "A former Training Manager at IndiGo with 15 years of airline experience, Sunita leads our aviation program. She specializes in cabin crew grooming, in-flight safety, and airline service standards.",
   },
   {
-    name: "John D&apos;Souza",
+    name: "John D'Souza",
     role: "Head - Hotel Management",
-    experience: "20 years in luxury hotels",
-    image: "/images/faculty-3.jpg",
-    credentials: "Ex-GM, Taj Hotels",
+    description: "Ex-General Manager at Taj Hotels with 20 years in luxury hospitality, John brings real-world expertise to our hotel management curriculum covering front office, F&B, and housekeeping operations.",
+  },
+  {
+    name: "Priya Nair",
+    role: "Head - Cruise Management",
+    description: "With 12 years of experience aboard international cruise liners including Carnival and Royal Caribbean, Priya trains students in guest relations, onboard service, and maritime hospitality standards.",
+  },
+  {
+    name: "Amit Banerjee",
+    role: "Placement Coordinator",
+    description: "Amit manages industry relationships and student placements across aviation, hotel, and cruise sectors. His extensive network with over 50 recruiters ensures every graduate finds their ideal role.",
   },
 ]
 
@@ -226,23 +230,17 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {faculty.map((member) => (
-              <div key={member.name} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
-                <div className="relative h-64">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                  />
+              <div key={member.name} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-navy-light/30">
+                <div className="w-12 h-12 rounded-full bg-gold-pale flex items-center justify-center mb-4">
+                  <span className="text-gold-primary font-bold text-lg">
+                    {member.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
+                  </span>
                 </div>
-                <div className="p-5">
-                  <h4 className="font-bold text-navy-deep">{member.name}</h4>
-                  <p className="text-gold-primary text-sm font-medium">{member.role}</p>
-                  <p className="text-navy-muted text-sm mt-2">{member.experience}</p>
-                  <p className="text-xs text-navy-muted mt-1">{member.credentials}</p>
-                </div>
+                <h4 className="font-bold text-navy-deep text-lg">{member.name}</h4>
+                <p className="text-gold-primary text-sm font-medium mt-1">{member.role}</p>
+                <p className="text-navy-muted text-sm mt-3 leading-relaxed">{member.description}</p>
               </div>
             ))}
           </div>
