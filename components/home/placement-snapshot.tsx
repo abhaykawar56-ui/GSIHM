@@ -6,12 +6,26 @@ import Image from "next/image"
 const partnerLogos = [
   { name: "IndiGo", logo: "/logos/indigo.svg" },
   { name: "Air India", logo: "/logos/airindia.svg" },
+  { name: "Emirates", logo: "/logos/emirates.svg" },
+  { name: "Qatar Airways", logo: "/logos/qatar.svg" },
+  { name: "Vistara", logo: "/logos/vistara.svg" },
+  { name: "SpiceJet", logo: "/logos/spicejet.svg" },
+  { name: "AirAsia", logo: "/logos/airasia.svg" },
+  { name: "Go First", logo: "/logos/gofirst.svg" },
   { name: "Taj Hotels", logo: "/logos/taj.svg" },
+  { name: "Oberoi", logo: "/logos/oberoi.svg" },
+  { name: "ITC Hotels", logo: "/logos/itc.svg" },
   { name: "Hilton", logo: "/logos/hilton.svg" },
   { name: "Marriott", logo: "/logos/marriott.svg" },
-  { name: "ITC Hotels", logo: "/logos/itc.svg" },
+  { name: "Hyatt", logo: "/logos/hyatt.svg" },
+  { name: "Radisson", logo: "/logos/radisson.svg" },
+  { name: "Lemon Tree", logo: "/logos/lemontree.svg" },
   { name: "Carnival Cruises", logo: "/logos/carnival.svg" },
-  { name: "SpiceJet", logo: "/logos/spicejet.svg" },
+  { name: "Royal Caribbean", logo: "/logos/royalcaribbean.svg" },
+  { name: "Norwegian", logo: "/logos/norwegian.svg" },
+  { name: "MSC Cruises", logo: "/logos/msc.svg" },
+  { name: "Princess Cruises", logo: "/logos/princess.svg" },
+  { name: "Celebrity Cruises", logo: "/logos/celebrity.svg" },
 ]
 
 function AnimatedCounter({ end, duration = 2000 }: { end: number; duration?: number }) {
@@ -104,21 +118,31 @@ export function PlacementSnapshot() {
           <p className="text-center text-navy-light text-sm mb-8">
             Our students are hired by leading brands
           </p>
-          <div className="grid grid-cols-4 md:grid-cols-8 gap-8 items-center">
-            {partnerLogos.map((partner) => (
-              <div
-                key={partner.name}
-                className="flex items-center justify-center h-12 opacity-60 hover:opacity-100 transition-opacity"
-              >
-                <Image
-                  src={partner.logo}
-                  alt={partner.name}
-                  width={80}
-                  height={40}
-                  className="object-contain brightness-0 invert"
-                />
-              </div>
-            ))}
+          <div
+            className="marquee-track relative overflow-hidden"
+            style={{
+              maskImage:
+                "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+              WebkitMaskImage:
+                "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+            }}
+          >
+            <div className="marquee flex w-max flex-nowrap items-center gap-4">
+              {[...partnerLogos, ...partnerLogos].map((partner, index) => (
+                <div
+                  key={`${partner.name}-${index}`}
+                  className="flex items-center justify-center h-12 w-32 md:w-40 flex-shrink-0 opacity-60 hover:opacity-100 transition-opacity"
+                >
+                  <Image
+                    src={partner.logo}
+                    alt={partner.name}
+                    width={100}
+                    height={40}
+                    className="object-contain brightness-0 invert"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
