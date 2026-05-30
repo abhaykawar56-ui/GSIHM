@@ -387,8 +387,8 @@ export default function PartnershipsPage() {
               </form>
               <p className="text-navy-light text-xs mt-4 text-center">
                 Or email us directly at{" "}
-                <a href="mailto:partnerships@gsihm.edu.in" className="text-gold-primary hover:underline">
-                  partnerships@gsihm.edu.in
+                <a href="mailto:gsihm111@gmail.com" className="text-gold-primary hover:underline">
+                  gsihm111@gmail.com
                 </a>
               </p>
             </div>
