@@ -36,20 +36,6 @@ const mouPartners = [
     since: "2019",
     logo: "/logos/airindia.svg",
   },
-  {
-    name: "ITC Hotels",
-    sector: "Hotel",
-    coverage: "F&B and housekeeping placements, skill workshops",
-    since: "2016",
-    logo: "/logos/itc.svg",
-  },
-  {
-    name: "Marriott International",
-    sector: "Hotel",
-    coverage: "Global placement opportunities, leadership track",
-    since: "2017",
-    logo: "/logos/marriott.svg",
-  },
 ]
 
 const aviationBrands = [
@@ -217,7 +203,7 @@ export default function PartnershipsPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {mouPartners.map((partner) => (
               <div
                 key={partner.name}
