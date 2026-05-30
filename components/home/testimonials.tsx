@@ -90,9 +90,9 @@ export function Testimonials() {
                 <Star key={i} className="h-5 w-5 fill-gold-primary text-gold-primary" />
               ))}
             </div>
-            <span className="font-bold text-navy-deep text-xl">4.8</span>
+            <span className="font-bold text-navy-deep text-xl">4.9</span>
           </div>
-          <p className="text-navy-muted text-sm">Based on 500+ Google Reviews</p>
+          <p className="text-navy-muted text-sm">Based on 100+ Google Reviews</p>
         </div>
       </div>
     </section>
