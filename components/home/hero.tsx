@@ -59,7 +59,7 @@ export function Hero() {
             <div className="grid grid-cols-3 gap-4 pt-4">
               <div>
                 <p className="text-3xl font-bold text-navy-deep">17+</p>
-                <p className="text-sm text-navy-muted">Batches Trained</p>
+                <p className="text-sm text-navy-muted">Batches trained and placed</p>
               </div>
               <div>
                 <p className="text-3xl font-bold text-navy-deep">4.9</p>
