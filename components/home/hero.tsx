@@ -22,7 +22,7 @@ export function Hero() {
           <div className="space-y-8">
             <div className="space-y-4">
               <p className="text-gold-primary font-semibold tracking-wide uppercase text-sm">
-                100% Placement Record Since 2015
+                100% Placement Record Since 2018
               </p>
               <h1 className="text-balance">
                 Launch Your Career in{" "}
