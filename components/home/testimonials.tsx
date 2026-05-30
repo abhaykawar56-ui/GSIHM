@@ -15,11 +15,11 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Rahul Verma",
-    role: "Front Office Manager, Taj Hotels",
-    course: "Hotel Management 2022",
-    image: "/images/testimonial-2.jpg",
-    quote: "The practical exposure at GSIHM is unmatched. We trained at actual 5-star properties. Today, I manage the front office at Taj, and I credit my success to the foundation GSIHM built.",
+    name: "Anjana Rai",
+    role: "Culinary, Hilton",
+    course: "Hotel Management 2026",
+    image: "/images/testimonial-anjana-rai.jpg",
+    quote: "One of the best Hospitality Management in Siliguri. The course are well structured. Every day I'm learning new things. The mentors are very helpful and supportive. I feel very confident now. They provide us internship for our better future. I feel very proud to be the part of this institute.",
     rating: 5,
   },
 ]
