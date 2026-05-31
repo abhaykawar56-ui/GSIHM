@@ -347,6 +347,7 @@ export default function CoursesPage() {
                   ))}
                 </div>
               </div>
+            </div>
 
             {/* Sidebar */}
             <div className="space-y-8">
