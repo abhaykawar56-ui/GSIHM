@@ -34,7 +34,7 @@ const faqs = [
   },
   {
     question: "How long are the programs?",
-    answer: "Aviation and Cruise programs are 12 months each. Hotel Management is an 18-month program. All programs include practical training and internship opportunities.",
+    answer: "All programs are 12 months each - Aviation, Hotel Management, and Cruise Management. All programs include practical training and internship opportunities.",
   },
   {
     question: "Do you provide hostel accommodation?",
