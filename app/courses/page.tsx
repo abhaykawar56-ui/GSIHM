@@ -348,28 +348,6 @@ export default function CoursesPage() {
                 </div>
               </div>
 
-              {/* Alumni */}
-              <div>
-                <h3 className="text-2xl font-bold text-navy-deep mb-6">Our Alumni</h3>
-                <div className="grid sm:grid-cols-3 gap-6">
-                  {activeProgram.alumni.map((alum) => (
-                    <div key={alum.name} className="text-center">
-                      <div className="relative w-24 h-24 mx-auto rounded-full overflow-hidden mb-3">
-                        <Image
-                          src={alum.image}
-                          alt={alum.name}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                      <p className="font-semibold text-navy-deep">{alum.name}</p>
-                      <p className="text-sm text-navy-muted">{alum.role}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
             {/* Sidebar */}
             <div className="space-y-8">
               {/* Eligibility Checker */}
