@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 
 const faculty = [
   {
-    name: "Dr. Rajesh Kumar",
+    name: "Roshan Shahi Thakuri",
     role: "Director & Founder",
     description: "With over 25 years in the hospitality industry, Dr. Kumar founded GSIHM to bridge the gap between education and industry. He holds an MBA and PhD in Hospitality Management and has trained thousands of professionals across India.",
     image: "/images/faculty-1.jpg",
