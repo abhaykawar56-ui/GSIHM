@@ -39,10 +39,10 @@ const mouPartners = [
 ]
 
 const aviationBrands = [
-  { name: "IndiGo", logo: "/logos/indigo.svg" },
-  { name: "Air India", logo: "/logos/airindia.svg" },
-  { name: "Qatar Airways", logo: "/logos/qatar.svg" },
-  { name: "Emirates", logo: "/logos/emirates.svg" },
+  { name: "IndiGo", logo: "/logos/indigo-partnership.jpg" },
+  { name: "Air India", logo: "/logos/airindia-partnership.png" },
+  { name: "Qatar Airways", logo: "/logos/qatar-partnership.png" },
+  { name: "Emirates", logo: "/logos/emirates-partnership.jpg" },
 ]
 
 const hotelBrands = [
