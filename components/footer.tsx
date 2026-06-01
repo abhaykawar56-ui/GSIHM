@@ -23,6 +23,23 @@ const footerLinks = {
 }
 
 export function Footer() {
+  const handleBrochureDownload = async () => {
+    try {
+      const response = await fetch("/GSIHM-Brochure.pdf")
+      const blob = await response.blob()
+      const url = window.URL.createObjectURL(blob)
+      const link = document.createElement("a")
+      link.href = url
+      link.download = "GSIHM-Brochure.pdf"
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+      window.URL.revokeObjectURL(url)
+    } catch (error) {
+      console.error("Download failed:", error)
+    }
+  }
+
   return (
     <footer className="bg-navy-deep text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
