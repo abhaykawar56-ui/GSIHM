@@ -16,7 +16,7 @@ const footerLinks = {
   resources: [
     { href: "/contact#faq", label: "FAQs" },
     { href: "/contact", label: "Apply Now" },
-    { href: "/contact", label: "Download Brochure" },
+    { href: "/GSIHM-Brochure.pdf", label: "Download Brochure", download: true },
   ],
 }
 
@@ -91,12 +91,22 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-navy-light text-sm hover:text-gold-primary transition-colors"
-                  >
-                    {link.label}
-                  </Link>
+                  {link.download ? (
+                    <a
+                      href={link.href}
+                      download="GSIHM-Brochure.pdf"
+                      className="text-navy-light text-sm hover:text-gold-primary transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-navy-light text-sm hover:text-gold-primary transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

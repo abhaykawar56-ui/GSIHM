@@ -390,7 +390,7 @@ export default function CoursesPage() {
                   <Link href="/contact">Apply Now</Link>
                 </Button>
                 <Button asChild variant="outline" className="w-full mt-3 border-gold-primary text-gold-primary bg-navy-deep hover:bg-gold-primary hover:text-navy-deep font-semibold">
-                  <Link href="/contact">Download Brochure</Link>
+                  <a href="/GSIHM-Brochure.pdf" download="GSIHM-Brochure.pdf">Download Brochure</a>
                 </Button>
               </div>
             </div>
