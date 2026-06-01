@@ -286,14 +286,16 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {accreditations.map((accred) => (
-              <div key={accred.name} className="bg-navy-mid rounded-xl p-6 text-center">
-                <accred.icon className="h-10 w-10 text-gold-primary mx-auto mb-4" />
-                <h4 className="font-bold text-white mb-2">{accred.name}</h4>
-                <p className="text-navy-light text-sm">{accred.description}</p>
-              </div>
-            ))}
+          <div className="flex justify-center">
+            <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl">
+              {accreditations.map((accred) => (
+                <div key={accred.name} className="bg-navy-mid rounded-xl p-6 text-center">
+                  <accred.icon className="h-10 w-10 text-gold-primary mx-auto mb-4" />
+                  <h4 className="font-bold text-white mb-2">{accred.name}</h4>
+                  <p className="text-navy-light text-sm">{accred.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
