@@ -16,16 +16,16 @@ const videoTestimonials = [
 const placedStudents = [
   { name: "Akriti Lama", company: "IndiGo", role: "Cabin Crew", year: 2025, course: "Aviation", image: "/images/alumni/akriti-lama.jpg" },
   { name: "Jyotika Tamang", company: "Silver Nova Cruise", role: "F&B", year: 2025, course: "Cruise", image: "/images/alumni/jyotika-tamang.jpg" },
-  { name: "Kavya Iyer", company: "Silver Nova Cruise", role: "Guest Relations", year: 2026, course: "Cruise", image: "/images/alumni/kavya.jpg" },
-  { name: "Anaya Patel", company: "IndiGo", role: "Cabin Crew", year: 2025, course: "Aviation", image: "/images/alumni/anaya.jpg" },
-  { name: "Vikram Singh", company: "Hilton", role: "Chef", year: 2026, course: "Hotel", image: "/images/alumni/vikram.jpg" },
-  { name: "Neha Gupta", company: "JW Marquis Dubai", role: "Event Manager", year: 2026, course: "Hotel", image: "/images/alumni/neha.jpg" },
-  { name: "Rohan Desai", company: "IndiGo", role: "Ground Staff", year: 2025, course: "Aviation", image: "/images/alumni/rohan.jpg" },
-  { name: "Shreya Nair", company: "Downtown Abu Dhabi", role: "Housekeeping", year: 2025, course: "Hotel", image: "/images/alumni/shreya.jpg" },
-  { name: "Arjun Kumar", company: "Marriott", role: "F&B Service", year: 2026, course: "Hotel", image: "/images/alumni/arjun.jpg" },
-  { name: "Diya Joshi", company: "Silver Nova Cruise", role: "Cabin Staff", year: 2026, course: "Cruise", image: "/images/alumni/diya.jpg" },
-  { name: "Sameer Khan", company: "IndiGo", role: "Cabin Crew", year: 2026, course: "Aviation", image: "/images/alumni/sameer.jpg" },
-  { name: "Meera Singh", company: "Qasr Jumeirah Dubai", role: "Human Resources", year: 2025, course: "Hotel", image: "/images/alumni/meera.jpg" },
+  { name: "Gyeltshen Sherpa", company: "JW Marquis Dubai", role: "Culinary", year: 2025, course: "Hotel", image: "/images/alumni/gyeltshen-sherpa.jpg" },
+  { name: "Trisha Giri", company: "Downtown Abu Dhabi", role: "F&B Service", year: 2025, course: "Hotel", image: "/images/alumni/trisha-giri.jpg" },
+  { name: "Divya Dahal", company: "Marriott", role: "Human Resources", year: 2026, course: "Hotel", image: "/images/alumni/divya-dahal.jpg" },
+  { name: "Ashna Chhetri", company: "Hilton", role: "Human Resources", year: 2026, course: "Hotel", image: "/images/alumni/ashna-chhetri.jpg" },
+  { name: "Bharati Thapa", company: "Qasr Jumeirah Dubai", role: "Housekeeping", year: 2026, course: "Hotel", image: "/images/alumni/bharati-thapa.jpg" },
+  { name: "Jessey Gurung", company: "JW Marquis Dubai", role: "F&B Service", year: 2025, course: "Hotel", image: "/images/alumni/jessey-gurung.jpg" },
+  { name: "Upeksha Subba", company: "Marriott", role: "Front Office", year: 2025, course: "Hotel", image: "/images/alumni/upeksha-subba.jpg" },
+  { name: "Jodenla Lama", company: "Downtown Abu Dhabi", role: "Human Resources", year: 2025, course: "Hotel", image: "/images/alumni/jodenla-lama.jpg" },
+  { name: "Anjana Rai", company: "Hilton", role: "Culinary", year: 2026, course: "Hotel", image: "/images/alumni/anjana-rai.jpg" },
+  { name: "Dichen Sherpa", company: "JW Marquis Dubai", role: "Food & Beverage Service", year: 2025, course: "Hotel", image: "/images/alumni/dichen-sherpa.jpg" },
 ]
 
 const filters = [
