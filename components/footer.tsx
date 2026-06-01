@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import { MapPin, Phone, Mail } from "lucide-react"
 
@@ -16,7 +18,7 @@ const footerLinks = {
   resources: [
     { href: "/contact#faq", label: "FAQs" },
     { href: "/contact", label: "Apply Now" },
-    { href: "/GSIHM-Brochure.pdf", label: "Download Brochure", download: true },
+    { href: "#", label: "Download Brochure" },
   ],
 }
 
@@ -90,15 +92,14 @@ export function Footer() {
             <h4 className="font-semibold text-white mb-4">Resources</h4>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
-                <li key={link.href}>
-                  {link.download ? (
-                    <a
-                      href={link.href}
-                      download="GSIHM-Brochure.pdf"
-                      className="text-navy-light text-sm hover:text-gold-primary transition-colors"
+                <li key={link.label}>
+                  {link.label === "Download Brochure" ? (
+                    <button
+                      onClick={handleBrochureDownload}
+                      className="text-navy-light text-sm hover:text-gold-primary transition-colors text-left"
                     >
                       {link.label}
-                    </a>
+                    </button>
                   ) : (
                     <Link
                       href={link.href}

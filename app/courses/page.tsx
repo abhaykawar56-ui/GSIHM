@@ -198,6 +198,23 @@ export default function CoursesPage() {
   const [activeTab, setActiveTab] = useState("aviation")
   const [expandedModules, setExpandedModules] = useState<string[]>([])
 
+  const handleBrochureDownload = async () => {
+    try {
+      const response = await fetch("/GSIHM-Brochure.pdf")
+      const blob = await response.blob()
+      const url = window.URL.createObjectURL(blob)
+      const link = document.createElement("a")
+      link.href = url
+      link.download = "GSIHM-Brochure.pdf"
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+      window.URL.revokeObjectURL(url)
+    } catch (error) {
+      console.error("Download failed:", error)
+    }
+  }
+
   const activeProgram = programs.find((p) => p.id === activeTab)!
 
   const toggleModule = (title: string) => {
@@ -389,8 +406,8 @@ export default function CoursesPage() {
                 <Button asChild className="w-full bg-gold-primary text-navy-deep hover:bg-gold-soft font-semibold">
                   <Link href="/contact">Apply Now</Link>
                 </Button>
-                <Button asChild variant="outline" className="w-full mt-3 border-gold-primary text-gold-primary bg-navy-deep hover:bg-gold-primary hover:text-navy-deep font-semibold">
-                  <a href="/GSIHM-Brochure.pdf" download="GSIHM-Brochure.pdf">Download Brochure</a>
+                <Button onClick={handleBrochureDownload} variant="outline" className="w-full mt-3 border-gold-primary text-gold-primary bg-navy-deep hover:bg-gold-primary hover:text-navy-deep font-semibold">
+                  Download Brochure
                 </Button>
               </div>
             </div>
