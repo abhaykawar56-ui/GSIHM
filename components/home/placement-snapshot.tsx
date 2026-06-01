@@ -11,8 +11,10 @@ const partnerLogos = [
   { name: "Costa Cruises", logo: "/logos/costa.png" },
   { name: "Princess Cruises", logo: "/logos/princess.png" },
   { name: "Carnival Cruise Line", logo: "/logos/carnival.png" },
-  { name: "Carnival Maritime", logo: "/logos/carnival2.png" },
   { name: "Norwegian Cruise", logo: "/logos/norwegian.png" },
+  { name: "Emirates", logo: "/logos/emirates-new.png" },
+  { name: "Air India", logo: "/logos/airindia-new.png" },
+  { name: "Qatar Airways", logo: "/logos/qatar-new.png" },
 ]
 
 function AnimatedCounter({ end, duration = 2000 }: { end: number; duration?: number }) {
