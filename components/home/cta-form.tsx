@@ -17,7 +17,6 @@ export function CTAForm() {
     name: "",
     phone: "",
     course: "",
-    whatsapp: true,
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -136,18 +135,6 @@ export function CTAForm() {
                         </option>
                       ))}
                     </select>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <input
-                      type="checkbox"
-                      id="whatsapp"
-                      checked={formData.whatsapp}
-                      onChange={(e) => setFormData({ ...formData, whatsapp: e.target.checked })}
-                      className="w-4 h-4 rounded border-navy-light text-gold-primary focus:ring-gold-primary"
-                    />
-                    <label htmlFor="whatsapp" className="text-sm text-navy-muted">
-                      Receive updates via WhatsApp
-                    </label>
                   </div>
                   <Button
                     type="submit"
