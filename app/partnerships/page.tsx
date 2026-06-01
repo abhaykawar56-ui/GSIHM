@@ -41,32 +41,24 @@ const mouPartners = [
 const aviationBrands = [
   { name: "IndiGo", logo: "/logos/indigo.svg" },
   { name: "Air India", logo: "/logos/airindia.svg" },
-  { name: "SpiceJet", logo: "/logos/spicejet.svg" },
-  { name: "Vistara", logo: "/logos/vistara.svg" },
-  { name: "Go First", logo: "/logos/gofirst.svg" },
   { name: "Qatar Airways", logo: "/logos/qatar.svg" },
   { name: "Emirates", logo: "/logos/emirates.svg" },
-  { name: "Air Asia", logo: "/logos/airasia.svg" },
 ]
 
 const hotelBrands = [
   { name: "Taj Hotels", logo: "/logos/taj.svg" },
-  { name: "ITC Hotels", logo: "/logos/itc.svg" },
   { name: "Marriott", logo: "/logos/marriott.svg" },
   { name: "Hilton", logo: "/logos/hilton.svg" },
-  { name: "Oberoi", logo: "/logos/oberoi.svg" },
   { name: "Hyatt", logo: "/logos/hyatt.svg" },
-  { name: "Lemon Tree", logo: "/logos/lemontree.svg" },
   { name: "Radisson", logo: "/logos/radisson.svg" },
 ]
 
 const cruiseBrands = [
   { name: "Carnival", logo: "/logos/carnival.svg" },
-  { name: "MSC Cruises", logo: "/logos/msc.svg" },
-  { name: "Celebrity Cruises", logo: "/logos/celebrity.svg" },
+  { name: "Princess Cruises", logo: "/logos/princess.svg" },
   { name: "Royal Caribbean", logo: "/logos/royalcaribbean.svg" },
   { name: "Norwegian", logo: "/logos/norwegian.svg" },
-  { name: "Princess Cruises", logo: "/logos/princess.svg" },
+  { name: "Celebrity Cruises", logo: "/logos/celebrity.svg" },
 ]
 
 const mouBenefits = [
@@ -97,11 +89,11 @@ export default function PartnershipsPage() {
               </p>
               <div className="grid grid-cols-3 gap-6">
                 <div>
-                  <p className="text-3xl font-bold text-gold-primary">50+</p>
+                  <p className="text-3xl font-bold text-gold-primary">20+</p>
                   <p className="text-sm text-navy-muted">Partner Companies</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-gold-primary">12+</p>
+                  <p className="text-3xl font-bold text-gold-primary">2+</p>
                   <p className="text-sm text-navy-muted">Active MOUs</p>
                 </div>
                 <div>
@@ -325,7 +317,7 @@ export default function PartnershipsPage() {
               <Users className="h-12 w-12 text-gold-primary mb-4" />
               <h2 className="text-white mb-4">Partner With GSIHM</h2>
               <p className="text-navy-light text-lg mb-6">
-                Is your company looking for trained hospitality professionals? Join our network of 50+ partner companies and get priority access to our graduating talent pool.
+                Is your company looking for trained hospitality professionals? Join our network of 20+ partner companies and get priority access to our graduating talent pool.
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-3 text-navy-light">
@@ -388,7 +380,7 @@ export default function PartnershipsPage() {
           <div className="bg-white rounded-2xl p-8 lg:p-12 text-center max-w-3xl mx-auto shadow-lg">
             <h2 className="mb-4">Benefit from Our Partnerships</h2>
             <p className="text-navy-muted text-lg mb-8">
-              Join GSIHM and gain access to exclusive placement opportunities with our 50+ partner companies across Aviation, Hotel, and Cruise industries.
+              Join GSIHM and gain access to exclusive placement opportunities with our 20+ partner companies across Aviation, Hotel, and Cruise industries.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-gold-primary text-navy-deep hover:bg-gold-soft font-semibold px-8">
