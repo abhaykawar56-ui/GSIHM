@@ -214,23 +214,23 @@ export default function PlacementsPage() {
             {filteredStudents.map((student, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+                className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow"
               >
-                <div className="relative h-48">
+                <div className="relative aspect-[3/4] bg-navy-light overflow-hidden">
                   <Image
                     src={student.image}
                     alt={student.name}
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-xs font-medium text-navy-deep">
+                  <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-bold text-navy-deep">
                     {student.year}
                   </div>
                 </div>
                 <div className="p-4">
-                  <p className="font-semibold text-navy-deep">{student.name}</p>
-                  <p className="text-gold-primary text-sm font-medium">{student.company}</p>
-                  <p className="text-navy-muted text-sm">{student.role}</p>
+                  <p className="font-bold text-lg text-navy-deep mb-1">{student.name}</p>
+                  <p className="text-navy-muted text-sm mb-2">{student.role}</p>
+                  <p className="text-gold-primary text-sm font-semibold">{student.company}</p>
                 </div>
               </div>
             ))}
