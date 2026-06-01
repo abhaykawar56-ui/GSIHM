@@ -67,7 +67,7 @@ export function PlacementSnapshot() {
             Our Track Record
           </p>
           <h2 className="text-white text-balance mb-4">
-            100% Placement Success
+            98% Placement Success
           </h2>
           <p className="text-navy-light text-lg">
             Our students work at the world&apos;s most prestigious hospitality brands.
@@ -78,7 +78,7 @@ export function PlacementSnapshot() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
             <p className="text-4xl md:text-5xl font-bold text-gold-primary">
-              <AnimatedCounter end={100} />%
+              <AnimatedCounter end={98} />%
             </p>
             <p className="text-navy-light mt-2">Placement Rate</p>
           </div>
@@ -90,9 +90,9 @@ export function PlacementSnapshot() {
           </div>
           <div className="text-center">
             <p className="text-4xl md:text-5xl font-bold text-gold-primary">
-              <AnimatedCounter end={4} />+
+              <AnimatedCounter end={20} />+
             </p>
-            <p className="text-navy-light mt-2">MOU Partners</p>
+            <p className="text-navy-light mt-2">Hiring Partners</p>
           </div>
           <div className="text-center">
             <p className="text-4xl md:text-5xl font-bold text-gold-primary">

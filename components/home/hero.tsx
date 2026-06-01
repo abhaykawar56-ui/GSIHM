@@ -22,7 +22,7 @@ export function Hero() {
           <div className="space-y-8">
             <div className="space-y-4">
               <p className="text-gold-primary font-semibold tracking-wide uppercase text-sm">
-                100% Placement Record Since 2018
+                98% Placement Record Since 2018
               </p>
               <h1 className="text-balance">
                 Launch Your Career in{" "}
@@ -66,8 +66,8 @@ export function Hero() {
                 <p className="text-sm text-navy-muted">Google Rating</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-navy-deep">4+</p>
-                <p className="text-sm text-navy-muted">MOU Partners</p>
+                <p className="text-3xl font-bold text-navy-deep">20+</p>
+                <p className="text-sm text-navy-muted">Hiring Partners</p>
               </div>
             </div>
           </div>
