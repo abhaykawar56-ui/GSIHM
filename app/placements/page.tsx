@@ -42,7 +42,7 @@ const companyFilters = [
 const videoTestimonials = [
   { name: "Geltsyen Sherpa", role: "From passion to plate", thumbnail: "/images/geltsyen-thumbnail.png", duration: "2:15", videoUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/From%20passion%20to%20plate%2C%20the%20journey%20of%20a%20chef%20begins%20with%20hands-on%20experience%21%20%F0%9F%8D%BD%EF%B8%8F%E2%9C%A8%20Our%20talented%20-4jLGrEBbYOJdtkzE5SJru12As1LXUs.mp4" },
   { name: "Dechen Sherpa", role: "F&B Service, JW Marriott Marquis Dubai", thumbnail: "/images/dechen-thumbnail.png", duration: "2:30", videoUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hard%20work%2C%20dedication%2C%20and%20the%20right%20opportunity%20%E2%80%94%20successfully%20placed%20at%20JW%20Marriott%20Marquis%20Du-AUIqtT3VRGmQ4REmYjrCCmD4N5RDdM.mp4" },
-  { name: "Rahul Verma", role: "Front Office, Taj Hotels", thumbnail: "/images/video-2.png", duration: "3:12" },
+  { name: "Bharati Thapa", role: "Housekeeping, Jumeirah Al Qasr Dubai", thumbnail: "/images/bharati-thumbnail.png", duration: "2:25", videoUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Congratulations%20on%20getting%20placed%20at%20Al%20Qasr%21%20%F0%9F%8E%89%20Wishing%20you%20great%20success%2C%20new%20opportunities%2C%20a-BwrZhPqvtHpcmrhneOxQusJfQkJLva.mp4" },
   { name: "Kavya Iyer", role: "Guest Relations, Carnival", thumbnail: "/images/video-3.png", duration: "2:30" },
 ]
 
