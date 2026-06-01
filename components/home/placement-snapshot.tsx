@@ -117,13 +117,13 @@ export function PlacementSnapshot() {
               {[...partnerLogos, ...partnerLogos].map((partner, index) => (
                 <div
                   key={`${partner.name}-${index}`}
-                  className="flex items-center justify-center h-12 w-32 md:w-40 flex-shrink-0 opacity-60 hover:opacity-100 transition-opacity"
+                  className="flex items-center justify-center h-16 w-40 md:w-48 flex-shrink-0 opacity-60 hover:opacity-100 transition-opacity"
                 >
                   <Image
                     src={partner.logo}
                     alt={partner.name}
-                    width={100}
-                    height={40}
+                    width={140}
+                    height={56}
                     className="object-contain brightness-0 invert"
                   />
                 </div>
