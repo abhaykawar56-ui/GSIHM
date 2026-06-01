@@ -111,14 +111,6 @@ export default function PlacementsPage() {
       id: company,
       label: company
     }))
-  const [courseFilter, setCourseFilter] = useState("all")
-  const [companyFilter, setCompanyFilter] = useState("all")
-
-  const filteredStudents = placedStudents.filter((student) => {
-    const courseMatch = courseFilter === "all" || student.course === courseFilter
-    const companyMatch = companyFilter === "all" || student.company === companyFilter
-    return courseMatch && companyMatch
-  })
 
   return (
     <div className="pt-20">
