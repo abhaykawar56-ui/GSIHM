@@ -21,36 +21,52 @@ const batches = [
 
 const faqs = [
   {
-    question: "What are the eligibility criteria for admission?",
-    answer: "For most programs, you need to have completed 10+2 from any stream. Age should be between 18-28 years. For cruise programs, basic swimming proficiency is required. Specific requirements may vary by program.",
+    question: "Who can apply for admission at GSIHM?",
+    answer: "Students who have completed Class 12, or Graduation from a recognized board or university are eligible to apply for selected programs. GSIHM welcomes students looking to build careers in hospitality, aviation, cruise, and global service industries. Minimum Qualification: Class 12 (course dependent). Age Criteria: Typically 18+",
   },
   {
-    question: "What is the fee structure and are there payment plans?",
-    answer: "Our program fees range from ₹1.5L to ₹3.5L depending on the course. We offer flexible payment plans including EMI options, early bird discounts, and scholarship programs for deserving students.",
+    question: "What courses does GSIHM offer?",
+    answer: "GSIHM offers industry-oriented programs designed to prepare students for successful global careers through practical training and placement support. Programs include Hotel Management, Aviation Management, and Cruise Management. Course Duration: 1 year",
   },
   {
-    question: "Is placement really guaranteed?",
-    answer: "Yes! We have a 100% placement track record. Our MOU partnerships with 50+ companies ensure every graduate receives placement assistance until they are hired. Our dedicated placement cell works with students throughout the program.",
+    question: "What is the placement rate and recruitment process?",
+    answer: "GSIHM has achieved a 98% placement record, backed by industry partnerships and career-focused training. Students receive interview preparation, professional grooming, practical exposure, and placement assistance throughout their journey. Students Placed: 3000+. Placement Support Starts From: Training period onward",
   },
   {
-    question: "How long are the programs?",
-    answer: "All programs are 12 months each - Aviation, Hotel Management, and Cruise Management. All programs include practical training and internship opportunities.",
+    question: "Which companies hire GSIHM students?",
+    answer: "Students have opportunities to connect with leading hospitality, aviation, and cruise brands through institutional partnerships and recruitment programs. Some recruiting partners include JW Marriott Marquis Dubai, Jumeirah Al Qasr Dubai, Hilton Downtown Abu Dhabi, Leela Kovlam, and International Cruise Partners. Total Hiring Partners: 20+",
   },
   {
-    question: "Do you provide hostel accommodation?",
-    answer: "Yes, we have separate hostel facilities for boys and girls with modern amenities. Hostel accommodation is optional and charged separately from the program fee.",
+    question: "What is the average salary package offered?",
+    answer: "Salary packages vary depending on the industry, role, destination, and student performance. Opportunities are available across domestic and international markets. Average Package: ₹1.2 LPA. International Opportunities Available In: UAE, India, Middle East & selected global destinations",
   },
   {
-    question: "What documents are required for admission?",
-    answer: "You&apos;ll need 10th and 12th mark sheets, valid ID proof (Aadhar/Passport), passport-size photographs, medical fitness certificate, and any additional certificates you may have.",
+    question: "Are international placements available?",
+    answer: "Yes. Eligible students receive opportunities for training and placements through institutional partnerships with premium international hospitality and service brands. Countries Covered: 15+. International Partner Brands: Marriott, Jumeirah, Qatar Airways, Cruise Partners & more",
+  },
+  {
+    question: "What career opportunities are available after completing a program at GSIHM?",
+    answer: "Graduates can pursue careers across hospitality, aviation, cruise, luxury service, and customer experience industries. Career Paths Include: Hotel Operations, Cabin Crew & Aviation Services, Cruise Hospitality, Food & Beverage Operations, Guest Relations & Customer Experience. Placement Locations: India, UAE & international destinations",
+  },
+  {
+    question: "Do programs include practical training and internships?",
+    answer: "Yes. Programs are designed with strong practical exposure to ensure students graduate with real-world experience and industry confidence.",
+  },
+  {
+    question: "Why choose GSIHM for hospitality and aviation education?",
+    answer: "GSIHM combines industry-led training, practical exposure, professional development, and strong placement support to prepare students for real-world careers from day one. Placement Record: 98%. Students Placed: 3000+. Industry Partners: 20+. Countries Covered: 15+",
   },
   {
     question: "Can I visit the campus before enrolling?",
-    answer: "Absolutely! We encourage campus visits. You can schedule a campus tour where you&apos;ll see our training facilities, meet faculty, and attend a demo class. Contact our admissions team to book a visit.",
+    answer: "Absolutely. Students and parents are encouraged to visit the campus, meet faculty members, and explore the learning environment before making a decision. Campus Visit Timings: Monday–Saturday | 10:00 AM to 6:00 PM. Schedule a Visit: Contact Admissions Team",
   },
   {
-    question: "What is the application process?",
-    answer: "Step 1: Submit enquiry form. Step 2: Our counselor calls you within 24 hours. Step 3: Campus visit or virtual tour. Step 4: Document submission and fee payment. Step 5: Admission confirmation and batch allotment.",
+    question: "How is GSIHM different from traditional hotel management colleges?",
+    answer: "GSIHM combines industry-driven learning, practical exposure, personality development, and placement support to prepare students for global career opportunities. Industry Partners: 20+. Placement Record: 98%. Student Placements: 3000+",
+  },
+  {
+    question: "Where are GSIHM alumni working today?",
+    answer: "GSIHM alumni are building careers across premium hospitality, aviation, and global service brands in India and internationally. Students Placed: 3000+. Countries Covered: 15+. Featured Employers: JW Marriott Marquis Dubai, Jumeirah, Qatar Airways, IndiGo, Cruise partners & more",
   },
 ]
 
