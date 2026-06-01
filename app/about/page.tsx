@@ -8,32 +8,32 @@ import { cn } from "@/lib/utils"
 const faculty = [
   {
     name: "Roshan Shahi Thakuri",
-    role: "Director & Founder",
-    description: "With over 25 years in the hospitality industry, Dr. Kumar founded GSIHM to bridge the gap between education and industry. He holds an MBA and PhD in Hospitality Management and has trained thousands of professionals across India.",
+    role: "Director",
+    description: "10+ years of HR leadership across global hospitality brands, shaping industry-aligned education and career outcomes.",
     image: "/images/roshan-shahi-thakuri.jpg",
   },
   {
-    name: "Ritik Subba",
-    role: "Head - Aviation Training",
-    description: "An experienced aviation specialist with expertise in cabin crew training and airline operations. Ritik brings industry best practices to our aviation program, ensuring students meet international standards.",
-    image: "/images/ritik-subba.jpg",
-  },
-  {
     name: "Nehla Lama",
-    role: "Head - Hotel Management",
-    description: "With extensive experience in luxury hospitality, Nehla leads our hotel management curriculum. She specializes in front office operations, guest services, and professional etiquette training.",
+    role: "Operations Incharge & Soft Skills / PD Faculty",
+    description: "8+ years in corporate grooming and professional development, transforming students into industry-ready professionals.",
     image: "/images/nehla-lama.jpg",
   },
   {
     name: "Adarsh Narjinary",
-    role: "Head - Cruise Management",
-    description: "A seasoned cruise industry professional with years of international experience. Adarsh trains students in guest relations, maritime standards, and onboard hospitality excellence.",
+    role: "Faculty Incharge",
+    description: "Bringing premium Marriott experience to bridge classroom learning with real-world hospitality operations.",
     image: "/images/adarsh-narjinary.jpg",
   },
   {
+    name: "Ritik Subba",
+    role: "Hospitality & Bar Professional Faculty",
+    description: "Industry-trained hospitality specialist delivering practical learning in beverage and guest experience excellence.",
+    image: "/images/ritik-subba.jpg",
+  },
+  {
     name: "Archana Lama",
-    role: "Placement Coordinator",
-    description: "Archana manages our industry partnerships and student placements across all sectors. Her dedication ensures every graduate finds the right opportunity matching their career aspirations.",
+    role: "Admin & HR",
+    description: "Driving seamless operations and student support through structured administration and people management.",
     image: "/images/archana-lama.jpg",
   },
 ]
