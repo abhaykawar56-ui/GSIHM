@@ -9,7 +9,7 @@ const faculty = [
   {
     name: "Roshan Shahi Thakuri",
     role: "Director",
-    description: "10+ years of HR leadership across global hospitality brands, shaping industry-aligned education and career outcomes.",
+    description: "11+ years of HR leadership across global hospitality brands, shaping industry-aligned education and career outcomes.",
     image: "/images/roshan-shahi-thakuri.jpg",
   },
   {
