@@ -115,7 +115,7 @@ export default function PlacementsPage() {
               Placement Record
             </p>
             <h1 className="text-white text-balance mb-4">
-              <AnimatedCounter end={5000} />+ Students Placed,{" "}
+              <AnimatedCounter end={3000} />+ Students Placed,{" "}
               <span className="text-gold-primary">Zero Left Behind</span>
             </h1>
             <p className="text-navy-light text-lg max-w-2xl mx-auto">
@@ -127,27 +127,27 @@ export default function PlacementsPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
             <div className="text-center">
               <p className="text-4xl md:text-5xl font-bold text-gold-primary">
-                <AnimatedCounter end={100} suffix="%" />
+                <AnimatedCounter end={3000} suffix="+" />
+              </p>
+              <p className="text-navy-light mt-2">Students Placed</p>
+            </div>
+            <div className="text-center">
+              <p className="text-4xl md:text-5xl font-bold text-gold-primary">
+                <AnimatedCounter end={98} suffix="%" />
               </p>
               <p className="text-navy-light mt-2">Placement Rate</p>
             </div>
             <div className="text-center">
               <p className="text-4xl md:text-5xl font-bold text-gold-primary">
-                <AnimatedCounter end={50} suffix="+" />
+                <AnimatedCounter end={2} suffix="+" />
               </p>
               <p className="text-navy-light mt-2">Partner Companies</p>
             </div>
             <div className="text-center">
               <p className="text-4xl md:text-5xl font-bold text-gold-primary">
-                <AnimatedCounter end={12} />
+                <AnimatedCounter end={15} suffix="+" />
               </p>
-              <p className="text-navy-light mt-2">Countries</p>
-            </div>
-            <div className="text-center">
-              <p className="text-4xl md:text-5xl font-bold text-gold-primary">
-                ₹<AnimatedCounter end={8} />L
-              </p>
-              <p className="text-navy-light mt-2">Avg. Package</p>
+              <p className="text-navy-light mt-2">Countries Covered</p>
             </div>
           </div>
         </div>
@@ -292,7 +292,7 @@ export default function PlacementsPage() {
               <div className="flex items-center gap-4">
                 <TrendingUp className="h-8 w-8 text-gold-primary" />
                 <div>
-                  <p className="text-2xl font-bold text-navy-deep">₹8 LPA</p>
+                  <p className="text-2xl font-bold text-navy-deep">₹1.2 LPA</p>
                   <p className="text-navy-muted text-sm">Average Package</p>
                 </div>
               </div>
@@ -368,7 +368,7 @@ export default function PlacementsPage() {
             <Briefcase className="h-12 w-12 text-gold-primary mx-auto mb-4" />
             <h2 className="mb-4">Ready to Launch Your Career?</h2>
             <p className="text-navy-muted text-lg mb-8">
-              Join 5000+ successful alumni working at top hospitality brands worldwide. Your dream career is one application away.
+              Join 3000+ successful alumni working at top hospitality brands worldwide. Your dream career is one application away.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-gold-primary text-navy-deep hover:bg-gold-soft font-semibold px-8">
