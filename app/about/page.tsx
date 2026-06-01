@@ -155,20 +155,20 @@ export default function AboutPage() {
                 Building Global Hospitality Leaders Since 2018
               </h1>
               <p className="text-navy-muted text-lg leading-relaxed mb-6">
-                GSIHM was founded with a singular vision: to transform passionate individuals into world-class hospitality professionals. Over a decade later, we&apos;ve placed thousands of students in prestigious careers across aviation, hotels, and cruise industries.
+                GSIHM was founded in 2018. Over the past eight years, we have built a powerful network of global employers and brought together a faculty of industry veterans. Our sole focus has been helping students from this region step out of the classroom and launch highly successful careers in international hubs and global waters.
               </p>
               <div className="flex gap-8">
                 <div>
-                  <p className="text-3xl font-bold text-gold-primary">14+</p>
+                  <p className="text-3xl font-bold text-gold-primary">8+</p>
                   <p className="text-sm text-navy-muted">Years of Excellence</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-gold-primary">5000+</p>
+                  <p className="text-3xl font-bold text-gold-primary">3000+</p>
                   <p className="text-sm text-navy-muted">Students Placed</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-gold-primary">50+</p>
-                  <p className="text-sm text-navy-muted">Partner Companies</p>
+                  <p className="text-3xl font-bold text-gold-primary">20+</p>
+                  <p className="text-sm text-navy-muted">Hiring Partners</p>
                 </div>
               </div>
             </div>
