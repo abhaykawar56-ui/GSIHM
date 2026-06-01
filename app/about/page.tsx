@@ -41,11 +41,11 @@ const faculty = [
 const milestones = [
   { year: "2018", title: "Foundation", description: "GSIHM was founded with a vision to transform hospitality education in India." },
   { year: "2019", title: "First Batch", description: "Graduated our first batch with 100% placement in leading airlines and hotels." },
-  { year: "2020", title: "ISO Certification", description: "Achieved ISO 9001:2015 certification for quality management systems." },
-  { year: "2021", title: "NSQF Recognition", description: "Received National Skills Qualification Framework recognition." },
-  { year: "2022", title: "Cruise Program", description: "Launched specialized Cruise Management program with international partnerships." },
-  { year: "2023", title: "5000+ Alumni", description: "Celebrated placing over 5000 students in hospitality careers worldwide." },
-  { year: "2024", title: "New Campus", description: "Expanded to state-of-the-art training facilities with mock aircraft and hotel setups." },
+  { year: "2020", title: "Rapid Expansion", description: "Expanded programs to include Aviation, Hotel, and Cruise Management specializations." },
+  { year: "2021", title: "Industry Recognition", description: "Achieved MSME registration and ISO certification for quality management systems." },
+  { year: "2022", title: "Global Partnerships", description: "Established partnerships with international hospitality companies for student placements." },
+  { year: "2023", title: "3000+ Alumni Network", description: "Celebrated over 3000 students successfully placed in prestigious international companies." },
+  { year: "2026", title: "20+ Hiring Partners", description: "Strengthened relationships with 20+ leading hospitality brands for continuous recruitment." },
 ]
 
 const accreditations = [
