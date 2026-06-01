@@ -1,4 +1,6 @@
-"use client"
+""use client"
+
+import { useState } from "react""
 
 import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
@@ -97,6 +99,7 @@ function AnimatedCounter({ end, suffix = "" }: { end: number; suffix?: string })
 }
 
 export default function PlacementsPage() {
+  const [selectedVideo, setSelectedVideo] = useState<typeof videoTestimonials[0] | null>(null)
   const [courseFilter, setCourseFilter] = useState("all")
   const [companyFilter, setCompanyFilter] = useState("all")
 
@@ -253,7 +256,11 @@ export default function PlacementsPage() {
 
           <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {videoTestimonials.map((video, index) => (
-              <div key={index} className="group cursor-pointer">
+              <div 
+                key={index} 
+                className="group cursor-pointer"
+                onClick={() => setSelectedVideo(video)}
+              >
                 <div className="relative aspect-[9/16] rounded-xl overflow-hidden mb-4">
                   <Image
                     src={video.thumbnail}
@@ -276,6 +283,34 @@ export default function PlacementsPage() {
               </div>
             ))}
           </div>
+
+          {/* Video Modal */}
+          {selectedVideo && (
+            <div 
+              className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+              onClick={() => setSelectedVideo(null)}
+            >
+              <div 
+                className="relative w-full max-w-2xl aspect-[9/16] rounded-xl overflow-hidden"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <video 
+                  src={selectedVideo.videoUrl} 
+                  controls 
+                  autoPlay
+                  className="w-full h-full object-cover"
+                />
+                <button
+                  onClick={() => setSelectedVideo(null)}
+                  className="absolute top-4 right-4 bg-gold-primary hover:bg-gold-primary/90 text-navy-deep rounded-full p-2 transition-colors"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
