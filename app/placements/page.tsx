@@ -176,10 +176,10 @@ export default function PlacementsPage() {
                 {filters.map((filter) => (
                   <button
                     key={filter.id}
-                    onClick={() => setCourseFilter(filter.id)}
+                    onClick={() => setSelectedCourse(filter.id)}
                     className={cn(
                       "px-3 py-1.5 text-sm rounded-lg transition-colors",
-                      courseFilter === filter.id
+                      selectedCourse === filter.id
                         ? "bg-gold-primary text-navy-deep font-semibold"
                         : "bg-white text-navy-muted hover:bg-navy-light"
                     )}
@@ -196,10 +196,10 @@ export default function PlacementsPage() {
             {companyFilters.map((filter) => (
               <button
                 key={filter.id}
-                onClick={() => setCompanyFilter(filter.id)}
+                onClick={() => setSelectedCompany(filter.id)}
                 className={cn(
                   "px-4 py-2 text-sm rounded-lg border transition-colors",
-                  companyFilter === filter.id
+                  selectedCompany === filter.id
                     ? "border-gold-primary bg-gold-pale text-navy-deep font-medium"
                     : "border-navy-light bg-white text-navy-muted hover:border-gold-primary"
                 )}
