@@ -193,8 +193,8 @@ export default function AboutPage() {
             <div className="relative order-2 lg:order-1">
               <div className="relative aspect-square max-w-md mx-auto rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/founder.jpg"
-                  alt="Dr. Rajesh Kumar - Founder"
+                  src="/images/roshan-shahi-thakuri.jpg"
+                  alt="Roshan Shahi Thakuri - Founder"
                   fill
                   className="object-cover"
                 />
