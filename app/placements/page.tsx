@@ -250,10 +250,10 @@ export default function PlacementsPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {videoTestimonials.map((video, index) => (
               <div key={index} className="group cursor-pointer">
-                <div className="relative aspect-video rounded-xl overflow-hidden mb-4">
+                <div className="relative aspect-[9/16] rounded-xl overflow-hidden mb-4">
                   <Image
                     src={video.thumbnail}
                     alt={video.name}
