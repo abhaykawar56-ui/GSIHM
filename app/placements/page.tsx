@@ -40,7 +40,7 @@ const companyFilters = [
 ]
 
 const videoTestimonials = [
-  { name: "Chef's Journey", role: "From passion to plate", thumbnail: "/images/chef-video.png", duration: "2:15", videoUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/From%20passion%20to%20plate%2C%20the%20journey%20of%20a%20chef%20begins%20with%20hands-on%20experience%21%20%F0%9F%8D%BD%EF%B8%8F%E2%9C%A8%20Our%20talented%20-4jLGrEBbYOJdtkzE5SJru12As1LXUs.mp4" },
+  { name: "Geltsyen Sherpa", role: "From passion to plate", thumbnail: "/images/geltsyen-thumbnail.png", duration: "2:15", videoUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/From%20passion%20to%20plate%2C%20the%20journey%20of%20a%20chef%20begins%20with%20hands-on%20experience%21%20%F0%9F%8D%BD%EF%B8%8F%E2%9C%A8%20Our%20talented%20-4jLGrEBbYOJdtkzE5SJru12As1LXUs.mp4" },
   { name: "Priya Sharma", role: "Cabin Crew, IndiGo", thumbnail: "/images/video-1.png", duration: "2:45" },
   { name: "Rahul Verma", role: "Front Office, Taj Hotels", thumbnail: "/images/video-2.png", duration: "3:12" },
   { name: "Kavya Iyer", role: "Guest Relations, Carnival", thumbnail: "/images/video-3.png", duration: "2:30" },
