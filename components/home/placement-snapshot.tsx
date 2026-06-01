@@ -4,11 +4,6 @@ import { useEffect, useState, useRef } from "react"
 import Image from "next/image"
 
 const partnerLogos = [
-  { name: "Qatar Airways", logo: "/logos/qatar.jpg" },
-  { name: "Emirates", logo: "/logos/emirates.jpg" },
-  { name: "IndiGo", logo: "/logos/indigo.jpg" },
-  { name: "Air India", logo: "/logos/airindia.jpg" },
-  { name: "JW Marriott Marquis Dubai", logo: "/logos/jw-marriott.jpg" },
   { name: "Jumeirah Al Qasr Dubai", logo: "/logos/jumeirah.png" },
   { name: "Norwegian Cruise Line", logo: "/logos/ncl.png" },
   { name: "Hyatt Regency", logo: "/logos/hyatt.png" },
@@ -127,7 +122,7 @@ export function PlacementSnapshot() {
                     alt={partner.name}
                     width={100}
                     height={40}
-                    className="object-contain"
+                    className="object-contain brightness-0 invert"
                   />
                 </div>
               ))}
