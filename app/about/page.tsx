@@ -52,7 +52,6 @@ const accreditations = [
   { name: "NSQF", description: "National Skills Qualification Framework Level 4 certified", icon: Award },
   { name: "ISO 9001:2015", description: "International quality management certification", icon: Shield },
   { name: "AICTE", description: "Approved by All India Council for Technical Education", icon: Star },
-  { name: "Skill India", description: "Partner of Government of India&apos;s Skill India Mission", icon: Users },
 ]
 
 const galleryImages = [
