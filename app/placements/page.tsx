@@ -257,58 +257,52 @@ export default function PlacementsPage() {
               <div 
                 key={index} 
                 className="group cursor-pointer"
-                onClick={() => setSelectedVideo(video)}
               >
-                <div className="relative aspect-[9/16] rounded-xl overflow-hidden mb-4">
-                  <Image
-                    src={video.thumbnail}
-                    alt={video.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-navy-deep/40 group-hover:bg-navy-deep/60 transition-colors" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-gold-primary flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Play className="h-6 w-6 text-navy-deep fill-navy-deep ml-1" />
-                    </div>
-                  </div>
-                  <span className="absolute bottom-3 right-3 bg-navy-deep/80 text-white text-xs px-2 py-1 rounded">
-                    {video.duration}
-                  </span>
+                <div className="relative aspect-[9/16] rounded-xl overflow-hidden mb-4 bg-navy-deep">
+                  {selectedVideo?.name === video.name ? (
+                    <video 
+                      src={video.videoUrl} 
+                      controls 
+                      autoPlay
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <>
+                      <video 
+                        src={video.videoUrl}
+                        className="w-full h-full object-cover opacity-0 absolute"
+                        onLoadedMetadata={(e) => {
+                          if (e.currentTarget) {
+                            e.currentTarget.currentTime = 0
+                          }
+                        }}
+                      />
+                      <Image
+                        src={video.thumbnail}
+                        alt={video.name}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-navy-deep/40 group-hover:bg-navy-deep/60 transition-colors" />
+                      <div 
+                        className="absolute inset-0 flex items-center justify-center"
+                        onClick={() => setSelectedVideo(video)}
+                      >
+                        <div className="w-16 h-16 rounded-full bg-gold-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                          <Play className="h-6 w-6 text-navy-deep fill-navy-deep ml-1" />
+                        </div>
+                      </div>
+                      <span className="absolute bottom-3 right-3 bg-navy-deep/80 text-white text-xs px-2 py-1 rounded">
+                        {video.duration}
+                      </span>
+                    </>
+                  )}
                 </div>
                 <p className="font-semibold text-navy-deep">{video.name}</p>
                 <p className="text-navy-muted text-sm">{video.role}</p>
               </div>
             ))}
           </div>
-
-          {/* Video Modal */}
-          {selectedVideo && (
-            <div 
-              className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
-              onClick={() => setSelectedVideo(null)}
-            >
-              <div 
-                className="relative w-full max-w-2xl aspect-[9/16] rounded-xl overflow-hidden"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <video 
-                  src={selectedVideo.videoUrl} 
-                  controls 
-                  autoPlay
-                  className="w-full h-full object-cover"
-                />
-                <button
-                  onClick={() => setSelectedVideo(null)}
-                  className="absolute top-4 right-4 bg-gold-primary hover:bg-gold-primary/90 text-navy-deep rounded-full p-2 transition-colors"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          )}
         </div>
       </section>
 
