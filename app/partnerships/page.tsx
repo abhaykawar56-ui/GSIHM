@@ -235,7 +235,7 @@ export default function PartnershipsPage() {
             <Plane className="h-6 w-6 text-aviation" />
             <h2 className="text-2xl font-bold text-navy-deep">Aviation Partners</h2>
           </div>
-          <div className="grid grid-cols-4 md:grid-cols-8 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {aviationBrands.map((brand) => (
               <div
                 key={brand.name}
@@ -262,7 +262,7 @@ export default function PartnershipsPage() {
             <Building2 className="h-6 w-6 text-hotel" />
             <h2 className="text-2xl font-bold text-navy-deep">Hotel Partners</h2>
           </div>
-          <div className="grid grid-cols-4 md:grid-cols-8 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
             {hotelBrands.map((brand) => (
               <div
                 key={brand.name}
@@ -289,7 +289,7 @@ export default function PartnershipsPage() {
             <Ship className="h-6 w-6 text-cruise" />
             <h2 className="text-2xl font-bold text-navy-deep">Cruise Partners</h2>
           </div>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
             {cruiseBrands.map((brand) => (
               <div
                 key={brand.name}
