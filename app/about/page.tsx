@@ -10,7 +10,7 @@ const faculty = [
     name: "Roshan Shahi Thakuri",
     role: "Director & Founder",
     description: "With over 25 years in the hospitality industry, Dr. Kumar founded GSIHM to bridge the gap between education and industry. He holds an MBA and PhD in Hospitality Management and has trained thousands of professionals across India.",
-    image: "/images/faculty-1.jpg",
+    image: "/images/roshan-shahi-thakuri.jpg",
   },
   {
     name: "Sunita Mehta",
@@ -238,12 +238,13 @@ export default function AboutPage() {
             {faculty.map((member) => (
               <div key={member.name} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-navy-light/30 flex flex-col">
                 {/* Image placeholder */}
-                <div className="relative h-48 flex-shrink-0 bg-navy-deep flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-full bg-gold-primary flex items-center justify-center">
-                    <span className="text-navy-deep font-bold text-2xl">
-                      {member.name.split(" ").map((n: string) => n[0]).join("").slice(0, 2)}
-                    </span>
-                  </div>
+                <div className="relative h-48 flex-shrink-0 bg-navy-deep overflow-hidden">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-4 flex flex-col flex-1">
                   <h4 className="font-bold text-navy-deep text-sm">{member.name}</h4>
