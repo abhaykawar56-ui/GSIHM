@@ -120,7 +120,7 @@ export default function PlacementsPage() {
               <span className="text-gold-primary">Building Careers, Creating Futures</span>
             </h1>
             <p className="text-navy-light text-lg max-w-2xl mx-auto">
-              Our 100% placement guarantee isn&apos;t just a promise — it&apos;s our track record. See where our alumni are working today.
+              Our 98% placement record isn&apos;t just a number — it reflects the careers we&apos;ve built. Discover where our alumni are making their mark today.
             </p>
           </div>
 
