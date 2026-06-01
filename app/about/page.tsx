@@ -212,9 +212,9 @@ export default function AboutPage() {
                 &quot;When I started GSIHM, I saw a gap between what the hospitality industry needed and what education provided. Our mission has always been to bridge this gap — to create professionals who don&apos;t just fill positions, but transform the guest experience.&quot;
               </blockquote>
               <div>
-                <p className="font-bold text-navy-deep text-lg">Dr. Rajesh Kumar</p>
+                <p className="font-bold text-navy-deep text-lg">Roshan Shahi Thakuri</p>
                 <p className="text-navy-muted">Founder & Director, GSIHM</p>
-                <p className="text-sm text-gold-primary mt-1">25+ years in Hospitality Industry</p>
+                <p className="text-sm text-gold-primary mt-1">11+ years in Hospitality Industry</p>
               </div>
             </div>
           </div>
