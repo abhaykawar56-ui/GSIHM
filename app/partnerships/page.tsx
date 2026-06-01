@@ -22,20 +22,6 @@ const mouPartners = [
     since: "2015",
     logo: "/logos/taj.svg",
   },
-  {
-    name: "Carnival Cruise Lines",
-    sector: "Cruise",
-    coverage: "International placement, on-board training",
-    since: "2020",
-    logo: "/logos/carnival.svg",
-  },
-  {
-    name: "Air India",
-    sector: "Aviation",
-    coverage: "Priority hiring for cabin crew and ground staff",
-    since: "2019",
-    logo: "/logos/airindia.svg",
-  },
 ]
 
 const mouBenefits = [
