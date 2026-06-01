@@ -115,8 +115,9 @@ export default function PlacementsPage() {
               Placement Record
             </p>
             <h1 className="text-white text-balance mb-4">
-              <AnimatedCounter end={3000} />+ Students Placed,{" "}
-              <span className="text-gold-primary">Zero Left Behind</span>
+              3000+ Students Placed
+              <br />
+              <span className="text-gold-primary">Building Careers, Creating Futures</span>
             </h1>
             <p className="text-navy-light text-lg max-w-2xl mx-auto">
               Our 100% placement guarantee isn&apos;t just a promise — it&apos;s our track record. See where our alumni are working today.
@@ -139,9 +140,9 @@ export default function PlacementsPage() {
             </div>
             <div className="text-center">
               <p className="text-4xl md:text-5xl font-bold text-gold-primary">
-                <AnimatedCounter end={2} suffix="+" />
+                <AnimatedCounter end={20} suffix="+" />
               </p>
-              <p className="text-navy-light mt-2">Partner Companies</p>
+              <p className="text-navy-light mt-2">Hiring Partners</p>
             </div>
             <div className="text-center">
               <p className="text-4xl md:text-5xl font-bold text-gold-primary">
