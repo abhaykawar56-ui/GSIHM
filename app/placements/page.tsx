@@ -20,6 +20,12 @@ const placedStudents = [
   { name: "Anaya Patel", company: "Air India", role: "Cabin Crew", year: 2025, course: "Aviation", image: "/images/alumni/anaya.jpg" },
   { name: "Vikram Singh", company: "Marriott", role: "Chef", year: 2026, course: "Hotel", image: "/images/alumni/vikram.jpg" },
   { name: "Neha Gupta", company: "ITC Hotels", role: "Event Manager", year: 2026, course: "Hotel", image: "/images/alumni/neha.jpg" },
+  { name: "Rohan Desai", company: "Air India", role: "Ground Staff", year: 2025, course: "Aviation", image: "/images/alumni/rohan.jpg" },
+  { name: "Shreya Nair", company: "Marriott", role: "Housekeeping", year: 2025, course: "Hotel", image: "/images/alumni/shreya.jpg" },
+  { name: "Arjun Kumar", company: "Taj Hotels", role: "F&B Service", year: 2026, course: "Hotel", image: "/images/alumni/arjun.jpg" },
+  { name: "Diya Joshi", company: "Carnival Cruises", role: "Cabin Staff", year: 2026, course: "Cruise", image: "/images/alumni/diya.jpg" },
+  { name: "Sameer Khan", company: "IndiGo", role: "Cabin Crew", year: 2026, course: "Aviation", image: "/images/alumni/sameer.jpg" },
+  { name: "Meera Singh", company: "ITC Hotels", role: "Human Resources", year: 2025, course: "Hotel", image: "/images/alumni/meera.jpg" },
 ]
 
 const filters = [
