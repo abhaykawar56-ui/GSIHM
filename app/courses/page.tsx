@@ -236,7 +236,7 @@ export default function CoursesPage() {
               Choose Your Career Path
             </h1>
             <p className="text-navy-light text-lg">
-              Three specialized programs designed to launch your career in Aviation, Hotel Management, or Cruise industries with 100% placement support.
+              Three specialized programs designed to launch your career in Aviation, Hotel Management, or Cruise industries.
             </p>
           </div>
         </div>
