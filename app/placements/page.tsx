@@ -8,10 +8,10 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 const placedStudents = [
-  { name: "Dichen Sherpa", company: "JW Marriott Marquis Dubai", role: "F&B Service", year: 2025, course: "Hotel", image: "/images/alumni/dichen-sherpa.jpg" },
-  { name: "Trisha Giri", company: "Marriott", role: "F&B Service", year: 2025, course: "Hotel", image: "/images/alumni/trisha-giri.jpg" },
-  { name: "Sneha Lepcha", company: "Leela Kovlam", role: "F&B Service", year: 2026, course: "Hotel", image: "/images/alumni/sneha-lepcha.jpg" },
-  { name: "Cabin Crew", company: "Air India", role: "Cabin Crew", year: 2026, course: "Aviation", image: "/images/alumni/cabin-crew.jpg" },
+  { name: "Dichen Sherpa", company: "JW Marriott Marquis Dubai", role: "F&B Service", year: 2025, course: "Hotel", image: "/images/alumni/dichen-sherpa.png" },
+  { name: "Trisha Giri", company: "Marriott", role: "F&B Service", year: 2025, course: "Hotel", image: "/images/alumni/trisha-giri.png" },
+  { name: "Sneha Lepcha", company: "Leela Kovlam", role: "F&B Service", year: 2026, course: "Hotel", image: "/images/alumni/sneha-lepcha.png" },
+  { name: "Cabin Crew", company: "Air India", role: "Cabin Crew", year: 2026, course: "Aviation", image: "/images/alumni/cabin-crew.png" },
   { name: "Jyotika", company: "Taj Hotels", role: "Guest Relations", year: 2025, course: "Hotel", image: "/images/alumni/jyotika.jpg" },
   { name: "Jodenla Lama", company: "Marriott", role: "Human Resources", year: 2025, course: "Hotel", image: "/images/alumni/jodenla-lama.jpg" },
   { name: "Gyeltshen Sherpa", company: "JW Marriott Dubai", role: "Culinary", year: 2025, course: "Hotel", image: "/images/alumni/gyeltshen-sherpa.jpg" },
@@ -37,6 +37,9 @@ const companyFilters = [
   { id: "Air India", label: "Air India" },
   { id: "Marriott", label: "Marriott" },
   { id: "ITC Hotels", label: "ITC Hotels" },
+  { id: "JW Marriott Marquis Dubai", label: "JW Marriott Marquis Dubai" },
+  { id: "Leela Kovlam", label: "Leela Kovlam" },
+  { id: "Jumeirah Al Qasr", label: "Jumeirah Al Qasr" },
 ]
 
 const videoTestimonials = [
