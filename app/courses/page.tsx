@@ -20,7 +20,7 @@ const programs = [
     eligibility: "10+2 from any stream, Age 18-27",
     fee: "₹1,80,000",
     placementAssistance: "Interview Preparation & Airline Career Guidance",
-    batchDates: ["July 2024", "October 2024", "January 2025"],
+    batchDates: ["May 2026", "Nov 2026"],
     curriculum: [
       { title: "Aviation Fundamentals", topics: ["History of Aviation", "Aircraft Types & Components", "Aviation Terminology", "Airline Industry Overview"] },
       { title: "Cabin Crew Training", topics: ["Safety & Emergency Procedures", "First Aid & Medical Emergencies", "Service Excellence", "Food & Beverage Service"] },
@@ -51,7 +51,7 @@ const programs = [
     eligibility: "10+2 from any stream, Age 18-28",
     fee: "₹2,40,000",
     placementAssistance: "Hotel Industry Training & Career Guidance",
-    batchDates: ["August 2024", "November 2024", "February 2025"],
+    batchDates: ["May 2026", "Nov 2026"],
     curriculum: [
       { title: "Front Office Operations", topics: ["Reception & Check-in", "Reservation Systems", "Guest Relations", "Revenue Management"] },
       { title: "Food & Beverage Service", topics: ["Restaurant Operations", "Bar & Beverage", "Banquet Management", "Wine & Spirits"] },
@@ -82,7 +82,7 @@ const programs = [
     eligibility: "10+2 from any stream, Age 18-28, Swimming Proficiency",
     fee: "₹2,80,000",
     placementAssistance: "Cruise Line Interview Preparation & Career Support",
-    batchDates: ["September 2024", "December 2024", "March 2025"],
+    batchDates: ["May 2026", "Nov 2026"],
     curriculum: [
       { title: "Cruise Industry Overview", topics: ["Global Cruise Lines", "Ship Departments", "Maritime Regulations", "Cruise Itineraries"] },
       { title: "Hospitality Operations", topics: ["Guest Services", "F&B Service at Sea", "Entertainment & Events", "Casino Operations"] },
