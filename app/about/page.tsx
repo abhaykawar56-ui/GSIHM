@@ -56,12 +56,12 @@ const accreditations = [
 ]
 
 const galleryImages = [
-  { src: "/images/campus-1.jpg", category: "Classrooms", alt: "Modern classroom facility" },
-  { src: "/images/campus-2.jpg", category: "Mock Cabin", alt: "Aviation mock cabin training" },
-  { src: "/images/campus-3.jpg", category: "Kitchen", alt: "Professional kitchen lab" },
-  { src: "/images/campus-4.jpg", category: "Events", alt: "Student graduation ceremony" },
-  { src: "/images/campus-5.jpg", category: "Uniform", alt: "Students in professional uniforms" },
-  { src: "/images/campus-6.jpg", category: "Training", alt: "Hands-on training session" },
+  { src: "/images/infrastructure/meeting-room-1.webp", category: "Meeting Room", alt: "Modern meeting room facility" },
+  { src: "/images/infrastructure/office-kitchen-1.webp", category: "Office Kitchen", alt: "State-of-the-art office kitchen" },
+  { src: "/images/infrastructure/bar-setup.webp", category: "Bar Training", alt: "Professional bar setup training" },
+  { src: "/images/infrastructure/meeting-room-2.webp", category: "Meeting Room", alt: "Meeting room with modern amenities" },
+  { src: "/images/infrastructure/entrance.webp", category: "Campus Entrance", alt: "GSIHM campus entrance" },
+  { src: "/images/infrastructure/bar-counter.webp", category: "Bar Counter", alt: "Professional bar counter training area" },
 ]
 
 function Timeline() {
