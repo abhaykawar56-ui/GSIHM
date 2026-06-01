@@ -8,18 +8,18 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 const placedStudents = [
-  { name: "Ananya Sharma", company: "IndiGo", role: "Cabin Crew", year: 2024, course: "Aviation", image: "/images/placed-1.jpg" },
-  { name: "Rahul Verma", company: "Taj Hotels", role: "Front Office Executive", year: 2024, course: "Hotel", image: "/images/placed-2.jpg" },
-  { name: "Priya Patel", company: "Carnival Cruises", role: "Guest Relations", year: 2024, course: "Cruise", image: "/images/placed-3.jpg" },
-  { name: "Vikram Singh", company: "Air India", role: "Ground Staff", year: 2023, course: "Aviation", image: "/images/placed-4.jpg" },
-  { name: "Sneha Reddy", company: "Marriott", role: "F&B Associate", year: 2023, course: "Hotel", image: "/images/placed-5.jpg" },
-  { name: "Arjun Nair", company: "MSC Cruises", role: "Steward", year: 2023, course: "Cruise", image: "/images/placed-6.jpg" },
-  { name: "Kavya Iyer", company: "SpiceJet", role: "Cabin Crew", year: 2023, course: "Aviation", image: "/images/placed-7.jpg" },
-  { name: "Rohit Kumar", company: "ITC Hotels", role: "Guest Relations", year: 2022, course: "Hotel", image: "/images/placed-8.jpg" },
-  { name: "Meera Das", company: "Hilton", role: "Concierge", year: 2022, course: "Hotel", image: "/images/placed-9.jpg" },
-  { name: "Aditya Joshi", company: "IndiGo", role: "Customer Service", year: 2022, course: "Aviation", image: "/images/placed-10.jpg" },
-  { name: "Neha Gupta", company: "Celebrity Cruises", role: "Entertainment", year: 2022, course: "Cruise", image: "/images/placed-11.jpg" },
-  { name: "Sanjay Menon", company: "Taj Hotels", role: "Housekeeping Supervisor", year: 2021, course: "Hotel", image: "/images/placed-12.jpg" },
+  { name: "Dichen Sherpa", company: "JW Marriott Marquis Dubai", role: "F&B Service", year: 2025, course: "Hotel", image: "/images/alumni/dichen-sherpa.jpg" },
+  { name: "Trisha Giri", company: "Marriott", role: "F&B Service", year: 2025, course: "Hotel", image: "/images/alumni/trisha-giri.jpg" },
+  { name: "Sneha Lepcha", company: "Leela Kovlam", role: "F&B Service", year: 2026, course: "Hotel", image: "/images/alumni/sneha-lepcha.jpg" },
+  { name: "Cabin Crew", company: "Air India", role: "Cabin Crew", year: 2026, course: "Aviation", image: "/images/alumni/cabin-crew.jpg" },
+  { name: "Jyotika", company: "Taj Hotels", role: "Guest Relations", year: 2025, course: "Hotel", image: "/images/alumni/jyotika.jpg" },
+  { name: "Jodenla Lama", company: "Marriott", role: "Human Resources", year: 2025, course: "Hotel", image: "/images/alumni/jodenla-lama.jpg" },
+  { name: "Gyeltshen Sherpa", company: "JW Marriott Dubai", role: "Culinary", year: 2025, course: "Hotel", image: "/images/alumni/gyeltshen-sherpa.jpg" },
+  { name: "Passang Tamang", company: "Leela Kovlam", role: "F&B Service", year: 2026, course: "Hotel", image: "/images/alumni/passang-tamang.jpg" },
+  { name: "Anjana Rai", company: "Hilton", role: "Culinary", year: 2026, course: "Hotel", image: "/images/alumni/anjana-rai.jpg" },
+  { name: "Upeksha Subba", company: "Marriott", role: "Front Office", year: 2025, course: "Hotel", image: "/images/alumni/upeksha-subba.jpg" },
+  { name: "Bharati Thapa", company: "Jumeirah Al Qasr", role: "Housekeeping", year: 2026, course: "Hotel", image: "/images/alumni/bharati-thapa.jpg" },
+  { name: "Divya Dahal", company: "Marriott", role: "Human Resources", year: 2026, course: "Hotel", image: "/images/alumni/divya-dahal.jpg" },
 ]
 
 const filters = [
@@ -97,6 +97,20 @@ function AnimatedCounter({ end, suffix = "" }: { end: number; suffix?: string })
 
 export default function PlacementsPage() {
   const [selectedVideo, setSelectedVideo] = useState<typeof videoTestimonials[0] | null>(null)
+  const [selectedCourse, setSelectedCourse] = useState("all")
+  const [selectedCompany, setSelectedCompany] = useState("all")
+
+  const filteredStudents = placedStudents.filter((student) => {
+    const courseMatch = selectedCourse === "all" || student.course === selectedCourse
+    const companyMatch = selectedCompany === "all" || student.company === selectedCompany
+    return courseMatch && companyMatch
+  })
+
+  const uniqueCompanies = Array.from(new Set(placedStudents.map(s => s.company)))
+    .map(company => ({
+      id: company,
+      label: company
+    }))
   const [courseFilter, setCourseFilter] = useState("all")
   const [companyFilter, setCompanyFilter] = useState("all")
 
@@ -305,214 +319,99 @@ export default function PlacementsPage() {
 
           {/* Alumni Cards Section */}
           <div className="mt-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-navy-deep text-center mb-4">Our Alumni Network</h2>
-            <p className="text-center text-navy-muted mb-12">Meet our talented alumni working across the globe</p>
-            
-            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {/* Dichen Sherpa */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                <div className="relative aspect-[3/4] bg-navy-deep">
-                  <Image
-                    src="/images/alumni/dichen-sherpa.jpg"
-                    alt="Dichen Sherpa"
-                    fill
-                    className="object-cover"
-                  />
+            <div className="mb-12">
+              <h2 className="text-4xl font-bold text-navy-deep mb-2">Our Placed Alumni</h2>
+              <p className="text-navy-muted mb-8">Filter by course or company to see placements</p>
+
+              {/* Course Filters */}
+              <div className="mb-6">
+                <div className="flex items-center gap-4 mb-4">
+                  <Filter className="w-5 h-5 text-navy-muted" />
+                  <span className="text-navy-muted font-medium">Course:</span>
                 </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-navy-deep">Dichen Sherpa</h3>
-                  <p className="text-sm text-navy-muted">F&B Service</p>
-                  <p className="text-xs text-gold-primary">JW Marriott Marquis Dubai</p>
+                <div className="flex flex-wrap gap-3">
+                  {filters.map((filter) => (
+                    <button
+                      key={filter.id}
+                      onClick={() => setSelectedCourse(filter.id)}
+                      className={cn(
+                        "px-6 py-2 rounded-full font-medium transition-colors border",
+                        selectedCourse === filter.id
+                          ? "bg-gold-primary text-navy-deep border-gold-primary"
+                          : "bg-white text-navy-muted border-navy-light hover:border-gold-primary"
+                      )}
+                    >
+                      {filter.label}
+                    </button>
+                  ))}
                 </div>
               </div>
 
-              {/* Trisha Giri */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                <div className="relative aspect-[3/4] bg-navy-deep">
-                  <Image
-                    src="/images/alumni/trisha-giri.jpg"
-                    alt="Trisha Giri"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-navy-deep">Trisha Giri</h3>
-                  <p className="text-sm text-navy-muted">F&B Service</p>
-                  <p className="text-xs text-gold-primary">Marriott Downtown Abu Dhabi</p>
-                </div>
-              </div>
-
-              {/* Sneha Lepcha */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                <div className="relative aspect-[3/4] bg-navy-deep">
-                  <Image
-                    src="/images/alumni/sneha-lepcha.jpg"
-                    alt="Sneha Lepcha"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-navy-deep">Sneha Lepcha</h3>
-                  <p className="text-sm text-navy-muted">F&B Service</p>
-                  <p className="text-xs text-gold-primary">Leela Kovlam</p>
-                </div>
-              </div>
-
-              {/* Cabin Crew */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                <div className="relative aspect-[3/4] bg-navy-deep">
-                  <Image
-                    src="/images/alumni/cabin-crew.jpg"
-                    alt="Cabin Crew Staff"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-navy-deep">Cabin Crew</h3>
-                  <p className="text-sm text-navy-muted">Cabin Crew</p>
-                  <p className="text-xs text-gold-primary">Aviation Sector</p>
-                </div>
-              </div>
-
-              {/* Jyotika */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                <div className="relative aspect-[3/4] bg-navy-deep">
-                  <Image
-                    src="/images/alumni/jyotika.jpg"
-                    alt="Jyotika"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-navy-deep">Jyotika</h3>
-                  <p className="text-sm text-navy-muted">Hotel Professional</p>
-                  <p className="text-xs text-gold-primary">Hospitality Sector</p>
-                </div>
-              </div>
-
-              {/* Jodenla Lama */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                <div className="relative aspect-[3/4] bg-navy-deep">
-                  <Image
-                    src="/images/alumni/jodenla-lama.jpg"
-                    alt="Jodenla Lama"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-navy-deep">Jodenla Lama</h3>
-                  <p className="text-sm text-navy-muted">Human Resources</p>
-                  <p className="text-xs text-gold-primary">Marriott Downtown Abu Dhabi</p>
-                </div>
-              </div>
-
-              {/* Gyeltshen Sherpa */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                <div className="relative aspect-[3/4] bg-navy-deep">
-                  <Image
-                    src="/images/alumni/gyeltshen-sherpa.jpg"
-                    alt="Gyeltshen Sherpa"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-navy-deep">Gyeltshen Sherpa</h3>
-                  <p className="text-sm text-navy-muted">Culinary</p>
-                  <p className="text-xs text-gold-primary">JW Marriott Dubai</p>
-                </div>
-              </div>
-
-              {/* Passang Tamang */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                <div className="relative aspect-[3/4] bg-navy-deep">
-                  <Image
-                    src="/images/alumni/passang-tamang.jpg"
-                    alt="Passang Tamang"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-navy-deep">Passang Tamang</h3>
-                  <p className="text-sm text-navy-muted">F&B Service</p>
-                  <p className="text-xs text-gold-primary">Leela Kovlam</p>
-                </div>
-              </div>
-
-              {/* Anjana Rai */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                <div className="relative aspect-[3/4] bg-navy-deep">
-                  <Image
-                    src="/images/alumni/anjana-rai.jpg"
-                    alt="Anjana Rai"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-navy-deep">Anjana Rai</h3>
-                  <p className="text-sm text-navy-muted">Culinary</p>
-                  <p className="text-xs text-gold-primary">Hilton Hyderabad</p>
-                </div>
-              </div>
-
-              {/* Upeksha Subba */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                <div className="relative aspect-[3/4] bg-navy-deep">
-                  <Image
-                    src="/images/alumni/upeksha-subba.jpg"
-                    alt="Upeksha Subba"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-navy-deep">Upeksha Subba</h3>
-                  <p className="text-sm text-navy-muted">Front Office</p>
-                  <p className="text-xs text-gold-primary">Marriott Navi Mumbai</p>
-                </div>
-              </div>
-
-              {/* Bharati Thapa */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                <div className="relative aspect-[3/4] bg-navy-deep">
-                  <Image
-                    src="/images/alumni/bharati-thapa.jpg"
-                    alt="Bharati Thapa"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-navy-deep">Bharati Thapa</h3>
-                  <p className="text-sm text-navy-muted">Housekeeping</p>
-                  <p className="text-xs text-gold-primary">Al Qasr Jumeirah Dubai</p>
-                </div>
-              </div>
-
-              {/* Divya Dahal */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                <div className="relative aspect-[3/4] bg-navy-deep">
-                  <Image
-                    src="/images/alumni/divya-dahal.jpg"
-                    alt="Divya Dahal"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-navy-deep">Divya Dahal</h3>
-                  <p className="text-sm text-navy-muted">Human Resources</p>
-                  <p className="text-xs text-gold-primary">Marriott Navi Mumbai</p>
+              {/* Company Filters */}
+              <div>
+                <div className="flex flex-wrap gap-3">
+                  <button
+                    onClick={() => setSelectedCompany("all")}
+                    className={cn(
+                      "px-6 py-2 rounded-full font-medium transition-colors border",
+                      selectedCompany === "all"
+                        ? "bg-gold-primary text-navy-deep border-gold-primary"
+                        : "bg-white text-navy-muted border-navy-light hover:border-gold-primary"
+                    )}
+                  >
+                    All Companies
+                  </button>
+                  {uniqueCompanies.map((company) => (
+                    <button
+                      key={company.id}
+                      onClick={() => setSelectedCompany(company.id)}
+                      className={cn(
+                        "px-6 py-2 rounded-full font-medium transition-colors border",
+                        selectedCompany === company.id
+                          ? "bg-gold-primary text-navy-deep border-gold-primary"
+                          : "bg-white text-navy-muted border-navy-light hover:border-gold-primary"
+                      )}
+                    >
+                      {company.label}
+                    </button>
+                  ))}
                 </div>
               </div>
             </div>
+
+            {/* Alumni Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {filteredStudents.map((student, index) => (
+                <div key={index} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                  {/* Image Container */}
+                  <div className="relative aspect-[3/4] bg-navy-light overflow-hidden">
+                    <Image
+                      src={student.image}
+                      alt={student.name}
+                      fill
+                      className="object-cover"
+                    />
+                    {/* Year Badge */}
+                    <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm text-navy-deep font-bold px-3 py-1 rounded-full text-sm">
+                      {student.year}
+                    </div>
+                  </div>
+                  
+                  {/* Info Section */}
+                  <div className="p-4">
+                    <h3 className="font-bold text-lg text-navy-deep mb-1">{student.name}</h3>
+                    <p className="text-sm text-navy-muted mb-1">{student.role}</p>
+                    <p className="text-sm text-gold-primary font-medium">{student.company}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {filteredStudents.length === 0 && (
+              <div className="text-center py-12">
+                <p className="text-navy-muted text-lg">No students found matching the selected filters.</p>
+              </div>
+            )}
           </div>
         </div>
       </section>
