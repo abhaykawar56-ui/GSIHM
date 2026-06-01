@@ -7,32 +7,6 @@ import { Filter, Play, ChevronRight, Briefcase, TrendingUp, Users, CheckCircle }
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
-const placedStudents = [
-  { name: "Priya Sharma", company: "IndiGo", role: "Cabin Crew", year: 2025, course: "Aviation", image: "/images/alumni/priya.jpg" },
-  { name: "Rahul Verma", company: "Taj Hotels", role: "Front Office", year: 2025, course: "Hotel", image: "/images/alumni/rahul.jpg" },
-  { name: "Kavya Iyer", company: "Carnival Cruises", role: "Guest Relations", year: 2026, course: "Cruise", image: "/images/alumni/kavya.jpg" },
-  { name: "Anaya Patel", company: "Air India", role: "Cabin Crew", year: 2025, course: "Aviation", image: "/images/alumni/anaya.jpg" },
-  { name: "Vikram Singh", company: "Marriott", role: "Chef", year: 2026, course: "Hotel", image: "/images/alumni/vikram.jpg" },
-  { name: "Neha Gupta", company: "ITC Hotels", role: "Event Manager", year: 2026, course: "Hotel", image: "/images/alumni/neha.jpg" },
-]
-
-const filters = [
-  { id: "all", label: "All" },
-  { id: "Aviation", label: "Aviation" },
-  { id: "Hotel", label: "Hotel" },
-  { id: "Cruise", label: "Cruise" },
-]
-
-const companyFilters = [
-  { id: "all", label: "All Companies" },
-  { id: "IndiGo", label: "IndiGo" },
-  { id: "Taj Hotels", label: "Taj Hotels" },
-  { id: "Carnival Cruises", label: "Carnival" },
-  { id: "Air India", label: "Air India" },
-  { id: "Marriott", label: "Marriott" },
-  { id: "ITC Hotels", label: "ITC Hotels" },
-]
-
 const videoTestimonials = [
   { name: "Geltsyen Sherpa", role: "From passion to plate", thumbnail: "/images/geltsyen-thumbnail.png", duration: "2:15", videoUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/From%20passion%20to%20plate%2C%20the%20journey%20of%20a%20chef%20begins%20with%20hands-on%20experience%21%20%F0%9F%8D%BD%EF%B8%8F%E2%9C%A8%20Our%20talented%20-4jLGrEBbYOJdtkzE5SJru12As1LXUs.mp4" },
   { name: "Dechen Sherpa", role: "F&B Service, JW Marriott Marquis Dubai", thumbnail: "/images/dechen-thumbnail.png", duration: "2:30", videoUrl: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hard%20work%2C%20dedication%2C%20and%20the%20right%20opportunity%20%E2%80%94%20successfully%20placed%20at%20JW%20Marriott%20Marquis%20Du-AUIqtT3VRGmQ4REmYjrCCmD4N5RDdM.mp4" },
@@ -91,20 +65,6 @@ function AnimatedCounter({ end, suffix = "" }: { end: number; suffix?: string })
 
 export default function PlacementsPage() {
   const [selectedVideo, setSelectedVideo] = useState<typeof videoTestimonials[0] | null>(null)
-  const [selectedCourse, setSelectedCourse] = useState("all")
-  const [selectedCompany, setSelectedCompany] = useState("all")
-
-  const filteredStudents = placedStudents.filter((student) => {
-    const courseMatch = selectedCourse === "all" || student.course === selectedCourse
-    const companyMatch = selectedCompany === "all" || student.company === selectedCompany
-    return courseMatch && companyMatch
-  })
-
-  const uniqueCompanies = Array.from(new Set(placedStudents.map(s => s.company)))
-    .map(company => ({
-      id: company,
-      label: company
-    }))
 
   return (
     <div className="pt-20">
@@ -301,103 +261,6 @@ export default function PlacementsPage() {
                 <p className="text-navy-muted text-sm">{video.role}</p>
               </div>
             ))}
-          </div>
-
-          {/* Alumni Cards Section */}
-          <div className="mt-20">
-            <div className="mb-12">
-              <h2 className="text-4xl font-bold text-navy-deep mb-2">Our Placed Alumni</h2>
-              <p className="text-navy-muted mb-8">Filter by course or company to see placements</p>
-
-              {/* Course Filters */}
-              <div className="mb-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <Filter className="w-5 h-5 text-navy-muted" />
-                  <span className="text-navy-muted font-medium">Course:</span>
-                </div>
-                <div className="flex flex-wrap gap-3">
-                  {filters.map((filter) => (
-                    <button
-                      key={filter.id}
-                      onClick={() => setSelectedCourse(filter.id)}
-                      className={cn(
-                        "px-6 py-2 rounded-full font-medium transition-colors border",
-                        selectedCourse === filter.id
-                          ? "bg-gold-primary text-navy-deep border-gold-primary"
-                          : "bg-white text-navy-muted border-navy-light hover:border-gold-primary"
-                      )}
-                    >
-                      {filter.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Company Filters */}
-              <div>
-                <div className="flex flex-wrap gap-3">
-                  <button
-                    onClick={() => setSelectedCompany("all")}
-                    className={cn(
-                      "px-6 py-2 rounded-full font-medium transition-colors border",
-                      selectedCompany === "all"
-                        ? "bg-gold-primary text-navy-deep border-gold-primary"
-                        : "bg-white text-navy-muted border-navy-light hover:border-gold-primary"
-                    )}
-                  >
-                    All Companies
-                  </button>
-                  {uniqueCompanies.map((company) => (
-                    <button
-                      key={company.id}
-                      onClick={() => setSelectedCompany(company.id)}
-                      className={cn(
-                        "px-6 py-2 rounded-full font-medium transition-colors border",
-                        selectedCompany === company.id
-                          ? "bg-gold-primary text-navy-deep border-gold-primary"
-                          : "bg-white text-navy-muted border-navy-light hover:border-gold-primary"
-                      )}
-                    >
-                      {company.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Alumni Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {filteredStudents.map((student, index) => (
-                <div key={index} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                  {/* Image Container */}
-                  <div className="relative aspect-[3/4] bg-navy-light overflow-hidden">
-                    <Image
-                      src={student.image}
-                      alt={student.name}
-                      fill
-                      className="object-cover"
-                    />
-                    {/* Year Badge */}
-                    <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm text-navy-deep font-bold px-3 py-1 rounded-full text-sm">
-                      {student.year}
-                    </div>
-                  </div>
-                  
-                  {/* Info Section */}
-                  <div className="p-4">
-                    <h3 className="font-bold text-lg text-navy-deep mb-1">{student.name}</h3>
-                    <p className="text-sm text-navy-muted mb-1">{student.role}</p>
-                    <p className="text-sm text-gold-primary font-medium">{student.company}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {filteredStudents.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-navy-muted text-lg">No students found matching the selected filters.</p>
-              </div>
-            )}
           </div>
         </div>
       </section>
