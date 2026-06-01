@@ -49,9 +49,9 @@ const milestones = [
 ]
 
 const accreditations = [
-  { name: "NSQF", description: "National Skills Qualification Framework Level 4 certified", icon: Award },
-  { name: "ISO 9001:2015", description: "International quality management certification", icon: Shield },
-  { name: "AICTE", description: "Approved by All India Council for Technical Education", icon: Star },
+  { name: "MSME Registered", description: "Registered with Ministry of Micro, Small & Medium Enterprises", icon: Shield },
+  { name: "ISO Certified", description: "International standards certified for quality management", icon: Award },
+  { name: "CVESD Affiliated", description: "Affiliated with Central Council for Vocational Training", icon: Star },
 ]
 
 const galleryImages = [
