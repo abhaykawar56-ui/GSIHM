@@ -9,18 +9,18 @@ import { cn } from "@/lib/utils"
 
 const mouPartners = [
   {
-    name: "IndiGo Airlines",
-    sector: "Aviation",
-    coverage: "Direct campus recruitment, 2 batches per year",
-    since: "2018",
-    logo: "/logos/indigo.svg",
+    name: "JW Marriott Marquis Dubai",
+    sector: "Hotel",
+    coverage: "Direct recruitment pipeline, luxury hospitality training & global career exposure",
+    since: "2020",
+    logo: "/logos/jw-marriott.jpg",
   },
   {
-    name: "Taj Hotels",
+    name: "Jumeirah Al Qasr",
     sector: "Hotel",
-    coverage: "Management trainee program, internship placements",
-    since: "2015",
-    logo: "/logos/taj.svg",
+    coverage: "Exclusive placement pathway, ultra-luxury hospitality training & international exposure",
+    since: "2021",
+    logo: "/logos/jumeirah.png",
   },
 ]
 
