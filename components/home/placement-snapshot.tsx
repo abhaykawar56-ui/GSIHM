@@ -4,21 +4,20 @@ import { useEffect, useState, useRef } from "react"
 import Image from "next/image"
 
 const partnerLogos = [
-  { name: "Qatar Airways", logo: "/logos/qatar.svg" },
-  { name: "Emirates", logo: "/logos/emirates.svg" },
-  { name: "IndiGo", logo: "/logos/indigo.svg" },
-  { name: "Air India", logo: "/logos/airindia.svg" },
-  { name: "JW Marriott Marquis Dubai", logo: "/logos/marriott.svg" },
-  { name: "Jumeirah Al Qasr Dubai", logo: "/logos/jumeirah.svg" },
-  { name: "The Abu Dhabi Edition", logo: "/logos/edition.svg" },
-  { name: "Downtown Abu Dhabi", logo: "/logos/downtown.svg" },
-  { name: "Marriott Abu Dhabi", logo: "/logos/marriott.svg" },
-  { name: "Hyatt Jordan", logo: "/logos/hyatt.svg" },
-  { name: "Silversea Cruises", logo: "/logos/silversea.svg" },
-  { name: "Princess Cruises", logo: "/logos/princess.svg" },
-  { name: "Costa Cruises", logo: "/logos/costa.svg" },
-  { name: "Norwegian Cruise Line", logo: "/logos/norwegian.svg" },
-  { name: "Carnival Cruise Line", logo: "/logos/carnival.svg" },
+  { name: "Qatar Airways", logo: "/logos/qatar.jpg" },
+  { name: "Emirates", logo: "/logos/emirates.jpg" },
+  { name: "IndiGo", logo: "/logos/indigo.jpg" },
+  { name: "Air India", logo: "/logos/airindia.jpg" },
+  { name: "JW Marriott Marquis Dubai", logo: "/logos/jw-marriott.jpg" },
+  { name: "Jumeirah Al Qasr Dubai", logo: "/logos/jumeirah.png" },
+  { name: "Norwegian Cruise Line", logo: "/logos/ncl.png" },
+  { name: "Hyatt Regency", logo: "/logos/hyatt.png" },
+  { name: "Silversea Cruises", logo: "/logos/silversea.png" },
+  { name: "Costa Cruises", logo: "/logos/costa.png" },
+  { name: "Princess Cruises", logo: "/logos/princess.png" },
+  { name: "Carnival Cruise Line", logo: "/logos/carnival.png" },
+  { name: "Carnival Maritime", logo: "/logos/carnival2.png" },
+  { name: "Norwegian Cruise", logo: "/logos/norwegian.png" },
 ]
 
 function AnimatedCounter({ end, duration = 2000 }: { end: number; duration?: number }) {
@@ -108,9 +107,6 @@ export function PlacementSnapshot() {
 
         {/* Partner Logos */}
         <div className="border-t border-navy-mid pt-12">
-          <p className="text-center text-navy-light text-sm mb-8">
-            Our students are hired by leading brands
-          </p>
           <div
             className="marquee-track relative overflow-hidden"
             style={{
