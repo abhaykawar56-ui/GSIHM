@@ -165,14 +165,7 @@ export default function PartnershipsPage() {
                 className="bg-white rounded-xl p-6 border border-navy-light hover:border-gold-primary hover:shadow-lg transition-all"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-20 h-10 relative">
-                    <Image
-                      src={partner.logo}
-                      alt={partner.name}
-                      fill
-                      className="object-contain object-left"
-                    />
-                  </div>
+                  <h4 className="font-bold text-navy-deep text-lg">{partner.name}</h4>
                   <span className={cn(
                     "text-xs font-medium px-2 py-1 rounded",
                     partner.sector === "Aviation" && "bg-blue-100 text-blue-700",
@@ -182,7 +175,6 @@ export default function PartnershipsPage() {
                     {partner.sector}
                   </span>
                 </div>
-                <h4 className="font-bold text-navy-deep mb-2">{partner.name}</h4>
                 <p className="text-navy-muted text-sm mb-3">{partner.coverage}</p>
                 <p className="text-xs text-gold-primary font-medium">MOU since {partner.since}</p>
               </div>
