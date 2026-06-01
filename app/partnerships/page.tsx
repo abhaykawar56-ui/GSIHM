@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { FileCheck, Building2, Plane, Ship, Users, CheckCircle, ArrowRight, Mail } from "lucide-react"
+import { FileCheck, Building2, Users, CheckCircle, ArrowRight, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { cn } from "@/lib/utils"
@@ -36,29 +36,6 @@ const mouPartners = [
     since: "2019",
     logo: "/logos/airindia.svg",
   },
-]
-
-const aviationBrands = [
-  { name: "IndiGo", logo: "/logos/indigo-partnership.jpg" },
-  { name: "Air India", logo: "/logos/airindia-partnership.png" },
-  { name: "Qatar Airways", logo: "/logos/qatar-partnership.png" },
-  { name: "Emirates", logo: "/logos/emirates-partnership.jpg" },
-]
-
-const hotelBrands = [
-  { name: "Taj Hotels", logo: "/logos/taj.svg" },
-  { name: "Marriott", logo: "/logos/marriott.svg" },
-  { name: "Hilton", logo: "/logos/hilton.svg" },
-  { name: "Hyatt", logo: "/logos/hyatt.svg" },
-  { name: "Radisson", logo: "/logos/radisson.svg" },
-]
-
-const cruiseBrands = [
-  { name: "Carnival", logo: "/logos/carnival.svg" },
-  { name: "Princess Cruises", logo: "/logos/princess.svg" },
-  { name: "Royal Caribbean", logo: "/logos/royalcaribbean.svg" },
-  { name: "Norwegian", logo: "/logos/norwegian.svg" },
-  { name: "Celebrity Cruises", logo: "/logos/celebrity.svg" },
 ]
 
 const mouBenefits = [
@@ -222,87 +199,6 @@ export default function PartnershipsPage() {
                 <h4 className="font-bold text-navy-deep mb-2">{partner.name}</h4>
                 <p className="text-navy-muted text-sm mb-3">{partner.coverage}</p>
                 <p className="text-xs text-gold-primary font-medium">MOU since {partner.since}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Aviation Partners */}
-      <section className="bg-white py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-3 mb-8">
-            <Plane className="h-6 w-6 text-aviation" />
-            <h2 className="text-2xl font-bold text-navy-deep">Aviation Partners</h2>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {aviationBrands.map((brand) => (
-              <div
-                key={brand.name}
-                className="aspect-square bg-cream rounded-lg flex items-center justify-center p-4 hover:bg-gold-pale transition-colors"
-              >
-                <div className="relative w-full h-full">
-                  <Image
-                    src={brand.logo}
-                    alt={brand.name}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Hotel Partners */}
-      <section className="bg-cream py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-3 mb-8">
-            <Building2 className="h-6 w-6 text-hotel" />
-            <h2 className="text-2xl font-bold text-navy-deep">Hotel Partners</h2>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
-            {hotelBrands.map((brand) => (
-              <div
-                key={brand.name}
-                className="aspect-square bg-white rounded-lg flex items-center justify-center p-4 hover:bg-gold-pale transition-colors"
-              >
-                <div className="relative w-full h-full">
-                  <Image
-                    src={brand.logo}
-                    alt={brand.name}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Cruise Partners */}
-      <section className="bg-white py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-3 mb-8">
-            <Ship className="h-6 w-6 text-cruise" />
-            <h2 className="text-2xl font-bold text-navy-deep">Cruise Partners</h2>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
-            {cruiseBrands.map((brand) => (
-              <div
-                key={brand.name}
-                className="aspect-square bg-cream rounded-lg flex items-center justify-center p-4 hover:bg-gold-pale transition-colors"
-              >
-                <div className="relative w-full h-full">
-                  <Image
-                    src={brand.logo}
-                    alt={brand.name}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
               </div>
             ))}
           </div>
