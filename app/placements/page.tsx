@@ -8,18 +8,12 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 const placedStudents = [
-  { name: "Dichen Sherpa", company: "JW Marriott Marquis Dubai", role: "F&B Service", year: 2025, course: "Hotel", image: "/images/alumni/dichen-sherpa.png" },
-  { name: "Trisha Giri", company: "Marriott", role: "F&B Service", year: 2025, course: "Hotel", image: "/images/alumni/trisha-giri.png" },
-  { name: "Sneha Lepcha", company: "Leela Kovlam", role: "F&B Service", year: 2026, course: "Hotel", image: "/images/alumni/sneha-lepcha.png" },
-  { name: "Cabin Crew", company: "Air India", role: "Cabin Crew", year: 2026, course: "Aviation", image: "/images/alumni/cabin-crew.png" },
-  { name: "Jyotika", company: "Taj Hotels", role: "Guest Relations", year: 2025, course: "Hotel", image: "/images/alumni/jyotika.jpg" },
-  { name: "Jodenla Lama", company: "Marriott", role: "Human Resources", year: 2025, course: "Hotel", image: "/images/alumni/jodenla-lama.jpg" },
-  { name: "Gyeltshen Sherpa", company: "JW Marriott Dubai", role: "Culinary", year: 2025, course: "Hotel", image: "/images/alumni/gyeltshen-sherpa.jpg" },
-  { name: "Passang Tamang", company: "Leela Kovlam", role: "F&B Service", year: 2026, course: "Hotel", image: "/images/alumni/passang-tamang.jpg" },
-  { name: "Anjana Rai", company: "Hilton", role: "Culinary", year: 2026, course: "Hotel", image: "/images/alumni/anjana-rai.jpg" },
-  { name: "Upeksha Subba", company: "Marriott", role: "Front Office", year: 2025, course: "Hotel", image: "/images/alumni/upeksha-subba.jpg" },
-  { name: "Bharati Thapa", company: "Jumeirah Al Qasr", role: "Housekeeping", year: 2026, course: "Hotel", image: "/images/alumni/bharati-thapa.jpg" },
-  { name: "Divya Dahal", company: "Marriott", role: "Human Resources", year: 2026, course: "Hotel", image: "/images/alumni/divya-dahal.jpg" },
+  { name: "Priya Sharma", company: "IndiGo", role: "Cabin Crew", year: 2025, course: "Aviation", image: "/images/alumni/priya.jpg" },
+  { name: "Rahul Verma", company: "Taj Hotels", role: "Front Office", year: 2025, course: "Hotel", image: "/images/alumni/rahul.jpg" },
+  { name: "Kavya Iyer", company: "Carnival Cruises", role: "Guest Relations", year: 2026, course: "Cruise", image: "/images/alumni/kavya.jpg" },
+  { name: "Anaya Patel", company: "Air India", role: "Cabin Crew", year: 2025, course: "Aviation", image: "/images/alumni/anaya.jpg" },
+  { name: "Vikram Singh", company: "Marriott", role: "Chef", year: 2026, course: "Hotel", image: "/images/alumni/vikram.jpg" },
+  { name: "Neha Gupta", company: "ITC Hotels", role: "Event Manager", year: 2026, course: "Hotel", image: "/images/alumni/neha.jpg" },
 ]
 
 const filters = [
@@ -37,9 +31,6 @@ const companyFilters = [
   { id: "Air India", label: "Air India" },
   { id: "Marriott", label: "Marriott" },
   { id: "ITC Hotels", label: "ITC Hotels" },
-  { id: "JW Marriott Marquis Dubai", label: "JW Marriott Marquis Dubai" },
-  { id: "Leela Kovlam", label: "Leela Kovlam" },
-  { id: "Jumeirah Al Qasr", label: "Jumeirah Al Qasr" },
 ]
 
 const videoTestimonials = [
