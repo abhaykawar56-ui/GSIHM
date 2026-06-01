@@ -302,8 +302,248 @@ export default function PlacementsPage() {
               </div>
             ))}
           </div>
+
+          {/* Alumni Cards Section */}
+          <div className="mt-20">
+            <h2 className="text-3xl md:text-4xl font-bold text-navy-deep text-center mb-4">Our Alumni Network</h2>
+            <p className="text-center text-navy-muted mb-12">Meet our talented alumni working across the globe</p>
+            
+            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {/* Dichen Sherpa */}
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div className="relative aspect-[3/4] bg-navy-deep">
+                  <Image
+                    src="/images/alumni/dichen-sherpa.jpg"
+                    alt="Dichen Sherpa"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-navy-deep">Dichen Sherpa</h3>
+                  <p className="text-sm text-navy-muted">F&B Service</p>
+                  <p className="text-xs text-gold-primary">JW Marriott Marquis Dubai</p>
+                </div>
+              </div>
+
+              {/* Trisha Giri */}
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div className="relative aspect-[3/4] bg-navy-deep">
+                  <Image
+                    src="/images/alumni/trisha-giri.jpg"
+                    alt="Trisha Giri"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-navy-deep">Trisha Giri</h3>
+                  <p className="text-sm text-navy-muted">F&B Service</p>
+                  <p className="text-xs text-gold-primary">Marriott Downtown Abu Dhabi</p>
+                </div>
+              </div>
+
+              {/* Sneha Lepcha */}
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div className="relative aspect-[3/4] bg-navy-deep">
+                  <Image
+                    src="/images/alumni/sneha-lepcha.jpg"
+                    alt="Sneha Lepcha"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-navy-deep">Sneha Lepcha</h3>
+                  <p className="text-sm text-navy-muted">F&B Service</p>
+                  <p className="text-xs text-gold-primary">Leela Kovlam</p>
+                </div>
+              </div>
+
+              {/* Cabin Crew */}
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div className="relative aspect-[3/4] bg-navy-deep">
+                  <Image
+                    src="/images/alumni/cabin-crew.jpg"
+                    alt="Cabin Crew Staff"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-navy-deep">Cabin Crew</h3>
+                  <p className="text-sm text-navy-muted">Cabin Crew</p>
+                  <p className="text-xs text-gold-primary">Aviation Sector</p>
+                </div>
+              </div>
+
+              {/* Jyotika */}
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div className="relative aspect-[3/4] bg-navy-deep">
+                  <Image
+                    src="/images/alumni/jyotika.jpg"
+                    alt="Jyotika"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-navy-deep">Jyotika</h3>
+                  <p className="text-sm text-navy-muted">Hotel Professional</p>
+                  <p className="text-xs text-gold-primary">Hospitality Sector</p>
+                </div>
+              </div>
+
+              {/* Jodenla Lama */}
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div className="relative aspect-[3/4] bg-navy-deep">
+                  <Image
+                    src="/images/alumni/jodenla-lama.jpg"
+                    alt="Jodenla Lama"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-navy-deep">Jodenla Lama</h3>
+                  <p className="text-sm text-navy-muted">Human Resources</p>
+                  <p className="text-xs text-gold-primary">Marriott Downtown Abu Dhabi</p>
+                </div>
+              </div>
+
+              {/* Gyeltshen Sherpa */}
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div className="relative aspect-[3/4] bg-navy-deep">
+                  <Image
+                    src="/images/alumni/gyeltshen-sherpa.jpg"
+                    alt="Gyeltshen Sherpa"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-navy-deep">Gyeltshen Sherpa</h3>
+                  <p className="text-sm text-navy-muted">Culinary</p>
+                  <p className="text-xs text-gold-primary">JW Marriott Dubai</p>
+                </div>
+              </div>
+
+              {/* Passang Tamang */}
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div className="relative aspect-[3/4] bg-navy-deep">
+                  <Image
+                    src="/images/alumni/passang-tamang.jpg"
+                    alt="Passang Tamang"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-navy-deep">Passang Tamang</h3>
+                  <p className="text-sm text-navy-muted">F&B Service</p>
+                  <p className="text-xs text-gold-primary">Leela Kovlam</p>
+                </div>
+              </div>
+
+              {/* Anjana Rai */}
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div className="relative aspect-[3/4] bg-navy-deep">
+                  <Image
+                    src="/images/alumni/anjana-rai.jpg"
+                    alt="Anjana Rai"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-navy-deep">Anjana Rai</h3>
+                  <p className="text-sm text-navy-muted">Culinary</p>
+                  <p className="text-xs text-gold-primary">Hilton Hyderabad</p>
+                </div>
+              </div>
+
+              {/* Upeksha Subba */}
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div className="relative aspect-[3/4] bg-navy-deep">
+                  <Image
+                    src="/images/alumni/upeksha-subba.jpg"
+                    alt="Upeksha Subba"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-navy-deep">Upeksha Subba</h3>
+                  <p className="text-sm text-navy-muted">Front Office</p>
+                  <p className="text-xs text-gold-primary">Marriott Navi Mumbai</p>
+                </div>
+              </div>
+
+              {/* Bharati Thapa */}
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div className="relative aspect-[3/4] bg-navy-deep">
+                  <Image
+                    src="/images/alumni/bharati-thapa.jpg"
+                    alt="Bharati Thapa"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-navy-deep">Bharati Thapa</h3>
+                  <p className="text-sm text-navy-muted">Housekeeping</p>
+                  <p className="text-xs text-gold-primary">Al Qasr Jumeirah Dubai</p>
+                </div>
+              </div>
+
+              {/* Divya Dahal */}
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div className="relative aspect-[3/4] bg-navy-deep">
+                  <Image
+                    src="/images/alumni/divya-dahal.jpg"
+                    alt="Divya Dahal"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-navy-deep">Divya Dahal</h3>
+                  <p className="text-sm text-navy-muted">Human Resources</p>
+                  <p className="text-xs text-gold-primary">Marriott Navi Mumbai</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
+      {/* Placement Video Modal */}
+      {selectedVideo && (
+        <div 
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+          onClick={() => setSelectedVideo(null)}
+        >
+          <div 
+            className="relative w-full max-w-2xl aspect-[9/16] rounded-xl overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <video 
+              src={selectedVideo.videoUrl} 
+              controls 
+              autoPlay
+              className="w-full h-full object-cover"
+            />
+            <button
+              onClick={() => setSelectedVideo(null)}
+              className="absolute top-4 right-4 bg-gold-primary hover:bg-gold-primary/90 text-navy-deep rounded-full p-2 transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Salary Breakdown */}
       <section className="py-16 lg:py-24 bg-cream">
