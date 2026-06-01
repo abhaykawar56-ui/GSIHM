@@ -1,19 +1,18 @@
 "use client"
 
-import { Shield, Award, Star, Users } from "lucide-react"
+import { Shield, Award, Star } from "lucide-react"
 
 const accreditations = [
   { name: "MSME Registered", icon: Shield },
   { name: "ISO Certified", icon: Award },
   { name: "CVESD Affiliated", icon: Award },
-  { name: "Skill India", icon: Users },
 ]
 
 const stats = [
   { value: "17+", label: "Batches Trained" },
   { value: "4.9★", label: "Google Rating" },
-  { value: "4+", label: "MOU Partners" },
-  { value: "100%", label: "Placement Rate" },
+  { value: "2+", label: "MOU Partners" },
+  { value: "98%", label: "Placement Rate" },
 ]
 
 export function TrustBar() {
