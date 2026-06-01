@@ -14,7 +14,7 @@ const videoTestimonials = [
 ]
 
 const placedStudents = [
-  { name: "Priya Sharma", company: "IndiGo", role: "Cabin Crew", year: 2025, course: "Aviation", image: "/images/alumni/priya.jpg" },
+  { name: "Akriti Lama", company: "IndiGo", role: "Cabin Crew", year: 2025, course: "Aviation", image: "/images/alumni/akriti-lama.jpg" },
   { name: "Rahul Verma", company: "Marriott", role: "Front Office", year: 2025, course: "Hotel", image: "/images/alumni/rahul.jpg" },
   { name: "Kavya Iyer", company: "Silver Nova Cruise", role: "Guest Relations", year: 2026, course: "Cruise", image: "/images/alumni/kavya.jpg" },
   { name: "Anaya Patel", company: "IndiGo", role: "Cabin Crew", year: 2025, course: "Aviation", image: "/images/alumni/anaya.jpg" },
