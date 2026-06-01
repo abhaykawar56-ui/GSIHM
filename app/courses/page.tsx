@@ -375,11 +375,6 @@ export default function CoursesPage() {
                       )}>
                         {date}
                       </span>
-                      {index === 0 && (
-                        <span className="text-xs font-semibold bg-gold-pale text-gold-primary px-2 py-1 rounded">
-                          Early Bird
-                        </span>
-                      )}
                     </div>
                   ))}
                 </div>
