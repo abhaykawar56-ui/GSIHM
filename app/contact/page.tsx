@@ -106,10 +106,7 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null)
 
-  return (
-    <>
-      <Schema schema={faqSchema(faqs)} />
-      <div>
+  const handleNext = () => {
     if (step < 3) setStep(step + 1)
     else handleSubmit()
   }
@@ -161,7 +158,9 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="pt-20">
+    <>
+      <Schema schema={faqSchema(faqs)} />
+      <div className="pt-20">
       {/* Hero Section */}
       <section className="bg-navy-deep py-16 lg:py-20 section-navy">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -542,5 +541,4 @@ export default function ContactPage() {
     </div>
     </>
   )
-}
 }
