@@ -5,6 +5,8 @@ import Link from "next/link"
 import { Phone, Mail, MapPin, MessageCircle, ChevronDown, CheckCircle, ArrowRight, Clock, FileText, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { Schema } from "@/components/schema"
+import { faqSchema } from "@/lib/schema"
 import { cn } from "@/lib/utils"
 
 const courses = [
@@ -104,7 +106,10 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null)
 
-  const handleNext = () => {
+  return (
+    <>
+      <Schema schema={faqSchema(faqs)} />
+      <div>
     if (step < 3) setStep(step + 1)
     else handleSubmit()
   }
@@ -267,7 +272,9 @@ export default function ContactPage() {
                           </button>
                         ))}
                       </div>
-                      <div>
+      <div>
+
+  const handleNext = () => {
                         <label className="block text-sm text-navy-muted mb-2">Preferred Batch</label>
                         <select
                           value={formData.batch}
@@ -533,5 +540,7 @@ export default function ContactPage() {
         </div>
       </section>
     </div>
+    </>
   )
+}
 }
