@@ -144,43 +144,29 @@ export default function AboutPage() {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="bg-cream py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="bg-navy-deep py-24 lg:py-32">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-gold-primary font-semibold tracking-wide uppercase text-sm mb-6">
+            Our Story
+          </p>
+          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-balance">
+            Building Global Hospitality Leaders Since 2018
+          </h1>
+          <p className="text-white/90 text-lg md:text-xl leading-relaxed mb-12 max-w-3xl mx-auto">
+            GSIHM was founded in 2018. Over the past eight years, we have built a powerful network of global employers and brought together a faculty of industry veterans. Our sole focus has been helping students from this region step out of the classroom and launch highly successful careers in international hubs and global waters.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-12">
             <div>
-              <p className="text-gold-primary font-semibold tracking-wide uppercase text-sm mb-4">
-                Our Story
-              </p>
-              <h1 className="text-balance mb-6">
-                Building Global Hospitality Leaders Since 2018
-              </h1>
-              <p className="text-navy-muted text-lg leading-relaxed mb-6">
-                GSIHM was founded in 2018. Over the past eight years, we have built a powerful network of global employers and brought together a faculty of industry veterans. Our sole focus has been helping students from this region step out of the classroom and launch highly successful careers in international hubs and global waters.
-              </p>
-              <div className="flex gap-8">
-                <div>
-                  <p className="text-3xl font-bold text-gold-primary">8+</p>
-                  <p className="text-sm text-navy-muted">Years of Excellence</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold text-gold-primary">3000+</p>
-                  <p className="text-sm text-navy-muted">Students Placed</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold text-gold-primary">20+</p>
-                  <p className="text-sm text-navy-muted">Hiring Partners</p>
-                </div>
-              </div>
+              <p className="text-4xl font-bold text-gold-primary">8+</p>
+              <p className="text-sm text-white/80 mt-2">Years of Excellence</p>
             </div>
-            <div className="relative">
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-                <Image
-                  src="/images/about-hero.jpg"
-                  alt="GSIHM Campus"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+            <div>
+              <p className="text-4xl font-bold text-gold-primary">3000+</p>
+              <p className="text-sm text-white/80 mt-2">Students Placed</p>
+            </div>
+            <div>
+              <p className="text-4xl font-bold text-gold-primary">20+</p>
+              <p className="text-sm text-white/80 mt-2">Hiring Partners</p>
             </div>
           </div>
         </div>
