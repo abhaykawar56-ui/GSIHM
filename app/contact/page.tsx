@@ -14,9 +14,8 @@ const courses = [
 ]
 
 const batches = [
-  { value: "july-2024", label: "July 2024" },
-  { value: "october-2024", label: "October 2024" },
-  { value: "january-2025", label: "January 2025" },
+  { value: "may-2026", label: "May 2026" },
+  { value: "november-2026", label: "November 2026" },
 ]
 
 const faqs = [
