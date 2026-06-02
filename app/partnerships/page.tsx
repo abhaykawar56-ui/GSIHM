@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { FileCheck, Building2, Users, CheckCircle, ArrowRight, Mail } from "lucide-react"
@@ -34,8 +35,55 @@ const mouBenefits = [
 ]
 
 export default function PartnershipsPage() {
+  const [formData, setFormData] = useState({
+    companyName: "",
+    contactPersonName: "",
+    workEmail: "",
+    phone: "",
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    
+    try {
+      const response = await fetch("/api/leads/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          type: "partnership",
+          data: {
+            companyName: formData.companyName,
+            contactPersonName: formData.contactPersonName,
+            workEmail: formData.workEmail,
+            phone: formData.phone,
+          },
+        }),
+      })
+      
+      if (response.ok) {
+        setIsSubmitted(true)
+        setFormData({
+          companyName: "",
+          contactPersonName: "",
+          workEmail: "",
+          phone: "",
+        })
+      } else {
+        console.error("[v0] Failed to submit partnership inquiry")
+      }
+    } catch (error) {
+      console.error("[v0] Error submitting partnership inquiry:", error)
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   return (
-    <div className="pt-20">
       {/* Hero Section */}
       <section className="bg-cream py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -211,32 +259,60 @@ export default function PartnershipsPage() {
 
             <div className="bg-navy-mid rounded-xl p-8">
               <h3 className="text-white font-bold text-xl mb-6">Corporate Partnership Enquiry</h3>
-              <form className="space-y-4">
-                <Input
-                  type="text"
-                  placeholder="Company Name"
-                  className="bg-white border-0 h-12"
-                />
-                <Input
-                  type="text"
-                  placeholder="Your Name"
-                  className="bg-white border-0 h-12"
-                />
-                <Input
-                  type="email"
-                  placeholder="Work Email"
-                  className="bg-white border-0 h-12"
-                />
-                <Input
-                  type="tel"
-                  placeholder="Phone Number"
-                  className="bg-white border-0 h-12"
-                />
-                <Button className="w-full h-12 bg-gold-primary text-navy-deep hover:bg-gold-soft font-semibold">
-                  Submit Partnership Enquiry
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </form>
+              {isSubmitted ? (
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <CheckCircle className="h-8 w-8 text-green-600" />
+                  </div>
+                  <h4 className="text-white font-bold mb-2">Thank You!</h4>
+                  <p className="text-navy-light">
+                    Your partnership enquiry has been received. Our team will contact you within 24 hours to discuss collaboration opportunities.
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <Input
+                    type="text"
+                    placeholder="Company Name"
+                    value={formData.companyName}
+                    onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
+                    required
+                    className="bg-white border-0 h-12"
+                  />
+                  <Input
+                    type="text"
+                    placeholder="Your Name"
+                    value={formData.contactPersonName}
+                    onChange={(e) => setFormData({ ...formData, contactPersonName: e.target.value })}
+                    required
+                    className="bg-white border-0 h-12"
+                  />
+                  <Input
+                    type="email"
+                    placeholder="Work Email"
+                    value={formData.workEmail}
+                    onChange={(e) => setFormData({ ...formData, workEmail: e.target.value })}
+                    required
+                    className="bg-white border-0 h-12"
+                  />
+                  <Input
+                    type="tel"
+                    placeholder="Phone Number"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    required
+                    className="bg-white border-0 h-12"
+                  />
+                  <Button 
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full h-12 bg-gold-primary text-navy-deep hover:bg-gold-soft font-semibold disabled:opacity-50"
+                  >
+                    {isSubmitting ? "Submitting..." : "Submit Partnership Enquiry"}
+                    {!isSubmitting && <ArrowRight className="ml-2 h-4 w-4" />}
+                  </Button>
+                </form>
+              )}
               <p className="text-navy-light text-xs mt-4 text-center">
                 Or email us directly at{" "}
                 <a href="mailto:gsihm111@gmail.com" className="text-gold-primary hover:underline">

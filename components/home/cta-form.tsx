@@ -26,14 +26,20 @@ export function CTAForm() {
     setIsSubmitting(true)
     
     try {
-      const response = await fetch("/api/leads", {
+      const response = await fetch("/api/leads/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          ...formData,
-          source: "homepage_cta",
+          type: "student",
+          data: {
+            name: formData.name,
+            email: "", // CTA form doesn't have email
+            phone: formData.phone,
+            courseInterest: formData.course,
+            preferredBatch: "",
+          },
         }),
       })
       

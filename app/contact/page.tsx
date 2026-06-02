@@ -113,14 +113,20 @@ export default function ContactPage() {
     setIsSubmitting(true)
     
     try {
-      const response = await fetch("/api/leads", {
+      const response = await fetch("/api/leads/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          ...formData,
-          source: "contact_page",
+          type: "student",
+          data: {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            courseInterest: formData.course,
+            preferredBatch: formData.batch,
+          },
         }),
       })
       
