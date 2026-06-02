@@ -144,6 +144,21 @@ export default function AboutPage() {
   return (
     <div className="pt-20">
       {/* Hero Section */}
+      <section className="bg-navy-deep py-24 lg:py-32">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-gold-primary font-semibold tracking-wide uppercase text-sm mb-6">
+            Our Programs
+          </p>
+          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-balance">
+            Choose Your Career Path
+          </h1>
+          <p className="text-white text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+            Three specialized programs designed to launch your career in Aviation, Hotel Management, or Cruise industries.
+          </p>
+        </div>
+      </section>
+
+      {/* Our Story Section */}
       <section className="bg-cream py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -151,9 +166,9 @@ export default function AboutPage() {
               <p className="text-gold-primary font-semibold tracking-wide uppercase text-sm mb-4">
                 Our Story
               </p>
-              <h1 className="text-balance mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-navy-deep mb-6 text-balance">
                 Building Global Hospitality Leaders Since 2018
-              </h1>
+              </h2>
               <p className="text-navy-muted text-lg leading-relaxed mb-6">
                 GSIHM was founded in 2018. Over the past eight years, we have built a powerful network of global employers and brought together a faculty of industry veterans. Our sole focus has been helping students from this region step out of the classroom and launch highly successful careers in international hubs and global waters.
               </p>
@@ -185,8 +200,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Founder Section */}
       <section className="bg-white py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
