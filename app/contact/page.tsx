@@ -5,8 +5,6 @@ import Link from "next/link"
 import { Phone, Mail, MapPin, MessageCircle, ChevronDown, CheckCircle, ArrowRight, Clock, FileText, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Schema } from "@/components/schema"
-import { faqSchema } from "@/lib/schema"
 import { cn } from "@/lib/utils"
 
 const courses = [
@@ -158,9 +156,7 @@ export default function ContactPage() {
   }
 
   return (
-    <>
-      <Schema schema={faqSchema(faqs)} />
-      <div className="pt-20">
+    <div className="pt-20">
       {/* Hero Section */}
       <section className="bg-navy-deep py-16 lg:py-20 section-navy">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -539,6 +535,5 @@ export default function ContactPage() {
         </div>
       </section>
     </div>
-    </>
   )
 }
