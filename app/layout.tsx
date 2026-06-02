@@ -3,8 +3,6 @@ import { DM_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
-import { Schema } from '@/components/schema'
-import { organizationSchema } from '@/lib/schema'
 import './globals.css'
 
 const dmSans = DM_Sans({ 
@@ -30,9 +28,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-cream">
-      <head>
-        <Schema schema={organizationSchema} />
-      </head>
       <body className={`${dmSans.variable} font-sans antialiased`}>
         <Navbar />
         <main>{children}</main>
