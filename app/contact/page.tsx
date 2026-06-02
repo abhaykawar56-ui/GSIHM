@@ -267,23 +267,6 @@ export default function ContactPage() {
                           </button>
                         ))}
                       </div>
-      <div>
-
-  const handleNext = () => {
-                        <label className="block text-sm text-navy-muted mb-2">Preferred Batch</label>
-                        <select
-                          value={formData.batch}
-                          onChange={(e) => setFormData({ ...formData, batch: e.target.value })}
-                          className="w-full h-12 px-3 rounded-lg border border-navy-light focus:border-gold-primary bg-white text-navy-deep"
-                        >
-                          <option value="">Select Batch (Optional)</option>
-                          {batches.map((batch) => (
-                            <option key={batch.value} value={batch.value}>
-                              {batch.label}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
                     </div>
                   )}
 
